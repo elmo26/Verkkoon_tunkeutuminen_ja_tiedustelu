@@ -1,9 +1,10 @@
 # h1 Korva netissä
 
-    x) Spektrini. Piirrä oma sähkömagneettinen spektri. Eli jana, jossa taajuus kasvaa. Ja 3-10 itseäsi kiinnostavaa sovellusta. Saavat olla aivan tavanomaisia. 
-      Merkitse nuolilla, mihin suuntaa kasvavat: aallonpituus, antennin koko, läpäisevyys, kyky siirtää tietoa. Tämä alakohta ei edellytä testejä tietokoneella.
+x) Piirsin oman sähkömagneettisen spektrin paintilla, ja merkitsin mihin suuntiin aallonpituus, antennin koko, läpäisevyys
+ja kyky siirtää tietoa kasvavat. Otin kolme asiaa havainnollistavaa esimerkkiä ja merkitsin ne spektrin yläpuolelle taajuuden perusteella.
+Havainnollistin myös aallonpituutta spektrin yläpuolella olevalla janalla, jonka toisessa päässä on pisimmät ja toisessa lyhimmät aallot.
     
-    <img width="1876" height="834" alt="aallonpituus" src="https://github.com/user-attachments/assets/4942c06a-682a-4247-b374-19c8ae5d0093" />
+<img width="1876" height="834" alt="aallonpituus" src="https://github.com/user-attachments/assets/4942c06a-682a-4247-b374-19c8ae5d0093" />
 
     
 

@@ -3,12 +3,11 @@
     x) Spektrini. Piirrä oma sähkömagneettinen spektri. Eli jana, jossa taajuus kasvaa. Ja 3-10 itseäsi kiinnostavaa sovellusta. Saavat olla aivan tavanomaisia. 
       Merkitse nuolilla, mihin suuntaa kasvavat: aallonpituus, antennin koko, läpäisevyys, kyky siirtää tietoa. Tämä alakohta ei edellytä testejä tietokoneella.
     
-      
-    a) WebSDR. Etäkäytä WebSDR-ohjelmaradiota, joka on kaukana sinusta ja kuuntele radioliikennettä. Radioliikenne tulee siepata niin, että radiovastaanotin on joko eri maassa tai vähintään 400 km paikasta, jossa teet tätä tehtävää. Käytä esimerkkinä julkista, suurelle yleisölle tarkoitettua viestiä, esimerkiksi yleisradiolähetystä. Kerro löytämäsi taajuus, aallonpituus ja modulaatio. Kuvaile askeleet ja ota ruutukaappaus. (Tehtävässä ei saa ilmaista sellaisen viestin sisältöä tai olemassaoloa, joka ei ole tarkoitettu julkiseksi. Voit sen sijaan kuvailla, miten sait julkisen radiolähetyksen kuulumaan kaiuttimistasi. Julkisten, esimerkiksi yleisradiolähetysten sisältöä saa tietysti kuvailla.)
-    b) Moduwhat? Kuuntele kanavaa, joka käyttää eri modulaatiota (AM, FM...) kuin edellisessä kohdassa käyttämäsi kanava.
-    c) ADS-B. Etsi jokin sinua kiinnnostava lentokone ADS-B Exchange -palvelusta. Kuvaile konetta ja sen lentoa. Selitä, miten tiedot on saatu.
-    d) Vapaaehtoinen Atalaya. Asenna F-Droid ja sillä Atalaya. Käytä ohjelmaa ja selitä tulokset.
-    e) Vapaaehtoinen WifiAnalyzer. Asenna F-Droid ja sillä WifiAnalyzer. Käytä ohjelmaa ja selitä tulokset.
-    f) Vapaaehtoinen GPSTest. Asenna F-Droid ja sillä GPSTest. Käytä ohjelmaa ja selitä tulokset.
+    <img width="1876" height="834" alt="aallonpituus" src="https://github.com/user-attachments/assets/4942c06a-682a-4247-b374-19c8ae5d0093" />
 
-# Lähteet
+    
+
+      
+    
+## Lähteet
+Sähkömagneettinen spektri - https://jkorpela.fi/smag.html

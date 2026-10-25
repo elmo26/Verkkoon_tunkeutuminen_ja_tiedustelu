@@ -31,11 +31,20 @@ d),e),f) En tehnyt näitä tehtäviä, sillä Android-puhelinta ei ollut käytö
 
 ## Lähteet
 Tero Karvinen luento 20.10 Haaga-Helia Ammattikorkeakoulu
-Tero Karvinen: Verkkoon tunkeutuminen ja tiedustelu - https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
+
+Tero Karvinen: Verkkoon tunkeutuminen ja tiedustelu - 
+https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
+
 Sähkömagneettinen spektri - https://jkorpela.fi/smag.html Luettu 24.10.2026
+
 Aallonpituus Wikipedia - https://fi.wikipedia.org/wiki/Aallonpituus Luettu 24.10.2026
-Gemini 3.8 Flash - promptattu: "mitkä taajuudet yleensä käyttää am ja mitkä fm modulaatiota ?" Luettu 24.10.2026
+
+Gemini 3.8 Flash - promptattu: 
+"mitkä taajuudet yleensä käyttää am ja mitkä fm modulaatiota ?" Luettu 24.10.2026
+
 ADS-B exchange about - https://www.adsbexchange.com/about/ Luettu 25.10.2026
-Automatic Dependent Surveillance–Broadcast Wikipedia - https://en.wikipedia.org/wiki/Automatic_Dependent_Surveillance%E2%80%93Broadcast Luettu 25.10.2026
+
+Automatic Dependent Surveillance–Broadcast Wikipedia - 
+https://en.wikipedia.org/wiki/Automatic_Dependent_Surveillance%E2%80%93Broadcast Luettu 25.10.2026
 
 

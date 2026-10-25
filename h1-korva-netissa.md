@@ -6,9 +6,11 @@ Havainnollistin myös aallonpituutta spektrin yläpuolella olevalla janalla, jon
 <img width="1876" height="834" alt="aallonpituus" src="https://github.com/user-attachments/assets/4942c06a-682a-4247-b374-19c8ae5d0093" />
 
 a) Löysin WebSDR.org-sivustolta Washington DC:n lähellä olevan vastaanottimen, etäisyys noin 7000km mitattuna google mapsilla. Sain lähetyksen kuulumaan heti, 
-kun painoin äänen päälle. Käytin asetuksia jotka sivulla oli avatessani sen: Taajuus 1499.95 KHz, BAND eli antenni MW-160 ja modulaatio AM eli amplitudimodulaatio. 
+kun painoin äänen päälle. Käytin asetuksia jotka sivulla oli avatessani sen: Taajuus 1499.95 kHz, BAND eli antenni MW-160 ja modulaatio AM eli amplitudimodulaatio. 
 Aallonpituuden voi laskea kaavalla λ = v/f, jossa v on aallon nopeus ja f taajuus. Aallon nopeus on sama kuin valon nopeus, sillä radioaalto etenee valon nopeudella.
-Aallonpituus = 300/1,5 ≈ 200 metriä. (Pyöristetyt arvot käytössä. 1499.90 KHz ≈ 1,5 MHz, Koska megahertsi = miljoona hertsiä, valon nopeudesta 300 000 000 m/s tulee 300.)
+Pyöristetyt arvot käytössä. 1499.90 kHz ≈ 1,5 MHz, Koska megahertsi = miljoona hertsiä, jaetaan valonnopues miljoonalla ja saadaan pyöristettynä 300.
+Aallonpituus = 300/1,5 ≈ 200 metriä.
+
 Kuulemani perusteella kyseessä oli yleisradiolähetys, sillä keskustelussa oli yhdysvaltain taloustilanne ja kanavalla toistettiin paljon mainoksia. Tässä vielä linkki
 sivulle: http://na5b.com:8901/ 
 <img width="1885" height="866" alt="kuva" src="https://github.com/user-attachments/assets/8f29cc65-436e-4913-b654-4206815d9fed" />

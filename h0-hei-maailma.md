@@ -8,6 +8,11 @@ Ip osoitteet olisi ehkä voinut merkitä keltaisiksi internet layerin alle, mutt
 
 
 ## Lähteet
-Tero Karvinen: Verkkoon tunkeutuminen ja tiedustelu - https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
-RTCP protokolla - https://en.wikipedia.org/wiki/RTP_Control_Protocol
-tcp/ip pinon kuva mikä näkyy kuvankaappauksessa - https://en.wikipedia.org/wiki/Internet_protocol_suite
+Tero Karvinen: Verkkoon tunkeutuminen ja tiedustelu - 
+https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
+
+RTCP protokolla - 
+https://en.wikipedia.org/wiki/RTP_Control_Protocol Luettu 23.10
+
+tcp/ip pinon kuva mikä näkyy kuvankaappauksessa - 
+https://en.wikipedia.org/wiki/Internet_protocol_suite

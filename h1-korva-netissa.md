@@ -24,7 +24,8 @@ c) Löysin ADS-B exchange -palvelusta lentonumerolla FIN482 lentävän ATR-75-50
 Koneen maanopeus oli katsomallani hetkellä 230 solmua ja lentokorkeus 18000 jalkaa eli noin 5,5 kilometriä.
 
 Tiedot on saatu ADS-B exchange palveluun ADS-B eli "Automatic Dependent Surveillance–Broadcast" teknologian avulla, jota lentokoneet käyttävät esimerkiksi sijaintitietojen 
-jakamiseen radiosignaalien avulla. Harrastelijoiden tai organisaatioiden ADS-B vastaanottimet ottavat tiedot vastaan ja lähettävät ne sivuston palvelimille.
+jakamiseen radiosignaalien avulla. Lentokoneet jakavat ADS-B:n avulla paikkatietoja ja muita parametreja toisilleen, lennonjohdolle ja kenelle tahansa kellä on ADS-B vastaanotin päällä.
+Harrastelijoiden tai organisaatioiden ADS-B vastaanottimet ottavat tiedot vastaan ja lähettävät ne ADS-B exchange sivuston palvelimille.
 Näistä tiedoista rakennetaan sivustolle kuva siitä, missä ja milloin mikäkin lentokone on. Vastaanottimet voivat olla maa-antenni pohjaisia tai esim. sateliitteja.
 
 d),e),f) En tehnyt näitä tehtäviä, sillä Android-puhelinta ei ollut käytössäni, joten F-Droidin käyttöönsaaminen olisi ollut haastavaa.

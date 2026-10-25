@@ -18,7 +18,7 @@ sivulle: http://na5b.com:8901/
 
 b) Aloitin tutkimalla eri modulaatiotapoja ja kysyin tekoälyltä asiasta. Kuten FM-radion nimestä päättelin, ylemmät radiotaajuudet ovat usein FM eli taajuusmoduloituja,
 alemmat taas, kuten a-kohdassa, amplitudimoduloituja. A-kohdassa käyttämäni sivu ei kattanut taajuuksia yli 30 MHz enkä löytänyt muita modulaatiotapoja käyttäviä lähetyksiä.
-Löysin saman sivun, mutta eri portin alta identtisen sivun, joska löysin taajuusmoduloidun (FM) yleislähetyksen, joka käsitteli USA:n säätä. Linkki: http://na5b.com:8902/
+Löysin saman osoitteen, mutta eri portin alta identtisen sivun, josta löysin taajuusmoduloidun (FM) yleislähetyksen, joka käsitteli USA:n säätä. Linkki: http://na5b.com:8902/
 Kanava oli taajuudella 162.5 MHz, kuten kuvasta näkyy.
 <img width="1861" height="870" alt="kuva" src="https://github.com/user-attachments/assets/3ea74c77-2556-4fd7-9b13-5071ffceb03e" />
 

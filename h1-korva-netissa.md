@@ -20,11 +20,22 @@ Löysin saman sivun, mutta eri portin alta identtisen sivun, joska löysin taaju
 Kanava oli taajuudella 162.5 MHz, kuten kuvasta näkyy.
 <img width="1861" height="870" alt="kuva" src="https://github.com/user-attachments/assets/3ea74c77-2556-4fd7-9b13-5071ffceb03e" />
 
+c) Löysin ADS-B exchange -palvelusta lentonumerolla FIN482 lentävän ATR-75-500 lentokoneen. Kone oli lentoradasta päätellen matkalla kuusamosta Helsinki-Vantaalle. 
+Koneen maanopeus oli katsomallani hetkellä 230 solmua ja lentokorkeus 18000 jalkaa eli noin 5,5 kilometriä.
 
+Tiedot on saatu ADS-B exchange palveluun ADS-B eli "Automatic Dependent Surveillance–Broadcast" teknologian avulla, jota lentokoneet käyttävät esimerkiksi sijaintitietojen 
+jakamiseen radiosignaalien avulla. Harrastelijoiden tai organisaatioiden ADS-B vastaanottimet ottavat tiedot vastaan ja lähettävät ne sivuston palvelimille.
+Näistä tiedoista rakennetaan sivustolle kuva siitä, missä ja milloin mikäkin lentokone on. Vastaanottimet voivat olla maa-antenni pohjaisia tai esim. sateliitteja.
 
-    
+d),e),f) En tehnyt näitä tehtäviä, sillä Android-puhelinta ei ollut käytössäni, joten F-Droidin käyttöönsaaminen olisi ollut haastavaa.
+
 ## Lähteet
-Sähkömagneettinen spektri - https://jkorpela.fi/smag.html
-Aallonpituus - https://fi.wikipedia.org/wiki/Aallonpituus
-Gemini 3.8 Flash - promptattu: "mitkä taajuudet yleensä käyttää am ja mitkä fm modulaatiota ?"
+Tero Karvinen luento 20.10 Haaga-Helia Ammattikorkeakoulu
+Tero Karvinen: Verkkoon tunkeutuminen ja tiedustelu - https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
+Sähkömagneettinen spektri - https://jkorpela.fi/smag.html Luettu 24.10.2026
+Aallonpituus Wikipedia - https://fi.wikipedia.org/wiki/Aallonpituus Luettu 24.10.2026
+Gemini 3.8 Flash - promptattu: "mitkä taajuudet yleensä käyttää am ja mitkä fm modulaatiota ?" Luettu 24.10.2026
+ADS-B exchange about - https://www.adsbexchange.com/about/ Luettu 25.10.2026
+Automatic Dependent Surveillance–Broadcast Wikipedia - https://en.wikipedia.org/wiki/Automatic_Dependent_Surveillance%E2%80%93Broadcast Luettu 25.10.2026
+
 

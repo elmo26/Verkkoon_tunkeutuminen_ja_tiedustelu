@@ -40,6 +40,8 @@ Lopussa palautin internetyhteyden takaisin ylös komennolla `sudo ip link set et
 
 ## c) Wireshark
 
+Wireshark on minulla valmiiksi asennettuna kali linuxille. En ollut bootannut pöytäkoneen kalia pitkään aikaan, joten ajoin komennon `sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove --purge && sudo apt clean`. Tällä komennolla ajoin uusimmat päivitykset sisään ja poistin samalla turhat "riippuvuudet" joita vanhoissa paketeissa oli. Sen verran pitkä aika oli edellisestä päivityskerrasta, että lähdin keittelemään kahvia.
+
 ## d) Oikeesti TCP/IP 
 
 ## e) Mitäs tuli surffattua

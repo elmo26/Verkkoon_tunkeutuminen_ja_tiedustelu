@@ -22,7 +22,7 @@ Kali linux on valmiiksi asennettuna pöytäkoneelle. Alustana virtualbox ja host
 
 ## b) Ei voi kalastaa
 
-Boottasin kalin ja katsoin interfacejen tilanteen komennolla `ip a`. Interface `eth0` oli lhäällä `state UP`. Todensin internetyhteyden toimivuuden pingaamalla googlen nimipalvelua  `ping -c4 8.8.8.8`.
+Boottasin kalin ja katsoin interfacejen tilanteen komennolla `ip a`. Interface `eth0` oli ylhäällä `state UP`. Todensin internetyhteyden toimivuuden pingaamalla googlen nimipalvelua  `ping -c4 8.8.8.8`.
 Kuten kuvasta näkyy, internetyhteys oli ylhäällä.
 
 <img width="1245" height="685" alt="kuva" src="https://github.com/user-attachments/assets/57c15722-f3e3-475f-a841-d87d6277c890" />Kuva 1. virtuaalikoneen internetyhteys ylhäällä, onnistunut ping-testi.
@@ -36,7 +36,7 @@ Sain: `Ping: connect: Network is unreachable`.
 <img width="1181" height="563" alt="kuva" src="https://github.com/user-attachments/assets/042282eb-fdc7-4cb7-8b8a-684b3ce5e0cc" />Kuva 2. Virtuaalikoneen internetyhteys ajettu alas, epäonnistunut ping-testi.
 
 
-Lopussa palautin internetyhteyden takaisin ylös komennolla `sudo ip link set eth0 up`
+Lopussa palautin internetyhteyden takaisin ylös komennolla `sudo ip link set eth0 up` ja todensin sen toimivuuden pingaamalla googlen nimipalvelua vielä kerran: `ping 8.8.8.8`.
 
 ## c) Wireshark
 

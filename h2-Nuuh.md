@@ -4,9 +4,18 @@
 Tiivistelmä artikkeleista [Wireshark - Getting Started (Karvinen 2025)](https://terokarvinen.com/wireshark-getting-started/) ja [Network Interface Names On Linux (Karvinen 2025)](https://terokarvinen.com/network-interface-linux/).
 
 ### Wireshark - Getting Started
-*
+* Wiresharkin asennus `sudo apt update && sudo apt install wireshark` (apt-get ei ole tarpeellinen nykyään). "Should non-superusers be able to capture packets?" Yes.
+* Lisätään käyttäjä wireshark-ryhmään, jotta voimme ajaa snifferiä. `Sudo adduser "user" wireshark`. Ryhmä päivittyy kun seuraavan kerran kirjautuu sisään.
+* Wiresharkin GUI:n saa terminalista auki komennolla `wireshark`.
+* Valitse sniffatessa sellainen interface (verkkokortti, fyysinen tai virtuaalinen), jossa on liikennettä.
+* Kaapatessa liikennettä, fiksua kaapata mahd. vähän, jotta läpikäyminen on helpompaa. Jos kaappauksessa ei ole liikennettä, kokeile generoida sitä: Avaa vaikka jokin nettisivu selaimella.
+* Statistics-valikon avulla voi valita, mitä kyseisestä kaappauksesta haluaa nähdä. Esimerkiksi kaikki kaappauksessa esiintyvät hostit ja protokollahierarkia.
+* Display filter -palkista voi filtteröidä kaapattua liikennettä esimerkiksi protokollan, portin, ip-osoitteen tai domainin perusteella.
 
 ### Network Interface Names On Linux
+* Verkkokortin nimen alku perustuu sen tyyppiin. `lo` = loopback adapteri (localhost), `wl` = WLAN (WiFi) ja en `Wired Ethernet`.
+* Esimerkkejä: `lo` = loopback adapteri, `ensp1s0` = langallinen Ethernet verkkokortti, `wlp4s0` = wifi (langaton) verkkokortti.
+* Kuinka tarkastaa interfacet : `ip a`
 
 ## a) Linux
 

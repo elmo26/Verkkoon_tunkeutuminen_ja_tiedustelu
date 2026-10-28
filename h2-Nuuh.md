@@ -22,9 +22,19 @@ Kali linux on valmiiksi asennettuna pöytäkoneelle. Alustana virtualbox ja host
 
 ## b) Ei voi kalastaa
 
-Bootataan kali ja katsotaan interfacejen tilanne komennolla `ip a`. Nähdään interface `eth0` ylhäällä `state UP`. Todennetaan internet yhteyden toimivuus pingaamalla googlen nimipalvelua  `ping -c4 8.8.8.8`.
+Bootataan kali ja katsotaan interfacejen tilanne komennolla `ip a`. Nähdään interface `eth0` ylhäällä `state UP`. Todennetaan internetyhteyden toimivuus pingaamalla googlen nimipalvelua  `ping -c4 8.8.8.8`.
+Kuten kuvasta näkyy, internetyhteys toimii
+
+<img width="1245" height="685" alt="kuva" src="https://github.com/user-attachments/assets/57c15722-f3e3-475f-a841-d87d6277c890" />
+Kuva 1. virtuaalikoneen internetyhteys ylhäällä, onnistunut ping-testi.
 
 
+Saamme eth0 interfacen ajettua alas komennolla `sudo ip link set eth0 down` [(Geeksforgeeks 2024)](https://www.geeksforgeeks.org/linux-unix/disabling-and-enabling-an-interface-on-linux-system/).
+Tämän jälkeen näemme `ip a` komennolla, että interface `eth0` on tilassa `DOWN`. Voimme vielä varmistaa yhteyden toimimattomuuden komennolla yrittämällä pingiä uudelleen `ping -c4 8.8.8.8`. Vastauksena
+Saamme: `Ping: connect: Network is unreachable`.
+
+<img width="1181" height="563" alt="kuva" src="https://github.com/user-attachments/assets/042282eb-fdc7-4cb7-8b8a-684b3ce5e0cc" />
+Kuva 2. Virtuaalikoneen internetyhteys ajettu alas, epäonnistunut ping-testi.
 
 ## c) Wireshark
 
@@ -49,4 +59,4 @@ Karvinen, T.2025 Wireshark - Getting Started: https://terokarvinen.com/wireshark
 
 Karvinen, T.2025 Network Interface Names On Linux: https://terokarvinen.com/network-interface-linux/ Luettu 28.10.2026
 
-geeksforgeeks, 29.1.2024. Disabling and Enabling an Interface on Linux System: 
+geeksforgeeks, 29.1.2024. Disabling and Enabling an Interface on Linux System: https://www.geeksforgeeks.org/linux-unix/disabling-and-enabling-an-interface-on-linux-system/ Luettu 28.10.2026

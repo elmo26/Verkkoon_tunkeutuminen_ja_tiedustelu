@@ -22,8 +22,7 @@ Kali linux on valmiiksi asennettuna pöytäkoneelle. Alustana virtualbox ja host
 
 ## b) Ei voi kalastaa
 
-Bootataan kali ja katsotaan interfacejen tilanne komennolla `ip a`. Nähdään interface `eth0` ylhäällä `state UP`. Todennetaan internet yhteys pingaamalla googlen nimipalvelua neljän icmp paketin verran 
-`ping -c4 8.8.8.8`.
+Bootataan kali ja katsotaan interfacejen tilanne komennolla `ip a`. Nähdään interface `eth0` ylhäällä `state UP`. Todennetaan internet yhteyden toimivuus pingaamalla googlen nimipalvelua  `ping -c4 8.8.8.8`.
 
 
 
@@ -49,3 +48,5 @@ Karvinen, T.2026 Verkkoon tunkeutuminen ja tiedustelu: https://terokarvinen.com/
 Karvinen, T.2025 Wireshark - Getting Started: https://terokarvinen.com/wireshark-getting-started/ Luettu 28.10.2026
 
 Karvinen, T.2025 Network Interface Names On Linux: https://terokarvinen.com/network-interface-linux/ Luettu 28.10.2026
+
+geeksforgeeks, 29.1.2024. Disabling and Enabling an Interface on Linux System: 

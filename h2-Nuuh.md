@@ -22,19 +22,21 @@ Kali linux on valmiiksi asennettuna pöytäkoneelle. Alustana virtualbox ja host
 
 ## b) Ei voi kalastaa
 
-Bootataan kali ja katsotaan interfacejen tilanne komennolla `ip a`. Nähdään interface `eth0` ylhäällä `state UP`. Todennetaan internetyhteyden toimivuus pingaamalla googlen nimipalvelua  `ping -c4 8.8.8.8`.
-Kuten kuvasta näkyy, internetyhteys toimii
+Boottasin kalin ja katsoin interfacejen tilanteen komennolla `ip a`. Interface `eth0` oli lhäällä `state UP`. Todensin internetyhteyden toimivuuden pingaamalla googlen nimipalvelua  `ping -c4 8.8.8.8`.
+Kuten kuvasta näkyy, internetyhteys oli ylhäällä.
 
-<img width="1245" height="685" alt="kuva" src="https://github.com/user-attachments/assets/57c15722-f3e3-475f-a841-d87d6277c890" />
-Kuva 1. virtuaalikoneen internetyhteys ylhäällä, onnistunut ping-testi.
+<img width="1245" height="685" alt="kuva" src="https://github.com/user-attachments/assets/57c15722-f3e3-475f-a841-d87d6277c890" />Kuva 1. virtuaalikoneen internetyhteys ylhäällä, onnistunut ping-testi.
 
 
-Saamme eth0 interfacen ajettua alas komennolla `sudo ip link set eth0 down` [(Geeksforgeeks 2024)](https://www.geeksforgeeks.org/linux-unix/disabling-and-enabling-an-interface-on-linux-system/).
-Tämän jälkeen näemme `ip a` komennolla, että interface `eth0` on tilassa `DOWN`. Voimme vielä varmistaa yhteyden toimimattomuuden komennolla yrittämällä pingiä uudelleen `ping -c4 8.8.8.8`. Vastauksena
-Saamme: `Ping: connect: Network is unreachable`.
 
-<img width="1181" height="563" alt="kuva" src="https://github.com/user-attachments/assets/042282eb-fdc7-4cb7-8b8a-684b3ce5e0cc" />
-Kuva 2. Virtuaalikoneen internetyhteys ajettu alas, epäonnistunut ping-testi.
+Sain ajettua internetyhteyden alas komennolla `sudo ip link set eth0 down` [(Geeksforgeeks 2024)](https://www.geeksforgeeks.org/linux-unix/disabling-and-enabling-an-interface-on-linux-system/).
+Tämän jälkeen näin `ip a` komennolla, että interface `eth0` on tilassa `DOWN`. Varmistin vielä  yhteyden toimimattomuuden yrittämällä pingata googlen nimipalvelua komennolla `ping -c4 8.8.8.8`. Vastauksena
+Sain: `Ping: connect: Network is unreachable`.
+
+<img width="1181" height="563" alt="kuva" src="https://github.com/user-attachments/assets/042282eb-fdc7-4cb7-8b8a-684b3ce5e0cc" />Kuva 2. Virtuaalikoneen internetyhteys ajettu alas, epäonnistunut ping-testi.
+
+
+Lopussa palautin internetyhteyden takaisin ylös komennolla `sudo ip link set eth0 up`
 
 ## c) Wireshark
 

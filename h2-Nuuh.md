@@ -42,7 +42,10 @@ Lopussa palautin internetyhteyden takaisin ylös komennolla `sudo ip link set et
 
 Wireshark on minulla valmiiksi asennettuna kali linuxille. En ollut bootannut pöytäkoneen kalia pitkään aikaan, joten ajoin komennon `sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove --purge && sudo apt clean`. Tällä komennolla ajoin uusimmat päivitykset sisään ja poistin samalla turhat "riippuvuudet" joita vanhoissa paketeissa oli. 
 
-Päivityksen jälkeen starttasin wiresharkin komennolla `wireshark` ja aloitin liikenteen sieppaamisen `eth0` kortilta. Generoin hieman liikennettä menemällä selaimella WebSdr-sivustolle ja sieltä edelleen Washington DC:ssä sijaitsevan vastaanottimen sivulle. Linkki: http://na5b.com:8902/ Tämä siksi, että nämä sivustot on salaamattomia, ja ajattelin sieppauksen tuloksien olevan mielenkiintoisempia. Sieppasin liikennettä muutaman sekunnin ja sitten lopetin sieppauksen.
+Päivityksen jälkeen starttasin wiresharkin komennolla `wireshark` ja aloitin liikenteen sieppaamisen `eth0` kortilta. Generoin hieman liikennettä menemällä selaimella WebSdr-sivustolle ja sieltä edelleen Washington DC:ssä sijaitsevan vastaanottimen sivulle. Linkki: http://na5b.com:8902/ Tämä siksi, että nämä sivustot on salaamattomia, ja ajattelin sieppauksen tuloksien olevan mielenkiintoisempia. Sieppasin liikennettä muutaman sekunnin ja paketteja kertyi yli 7000.
+
+<img width="1522" height="692" alt="kuva" src="https://github.com/user-attachments/assets/2f595378-d0ed-4a69-b830-a34d2d9f729c" /> Kuva 3. Wireshark ja liikenteen sieppaus.
+
 
 ## d) Oikeesti TCP/IP 
 

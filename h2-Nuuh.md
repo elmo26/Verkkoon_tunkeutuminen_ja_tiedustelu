@@ -13,13 +13,19 @@ Tiivistelmä artikkeleista [Wireshark - Getting Started (Karvinen 2025)](https:/
 * Display filter -palkista voi filtteröidä kaapattua liikennettä esimerkiksi protokollan, portin, ip-osoitteen tai domainin perusteella.
 
 ### Network Interface Names On Linux
-* Verkkokortin nimen alku perustuu sen tyyppiin. `lo` = loopback adapteri (localhost), `wl` = WLAN (WiFi) ja en `Wired Ethernet`.
+* Verkkokortin nimen alku perustuu sen tyyppiin. `lo` = loopback adapteri (localhost), `wl` = WLAN (WiFi) ja en =  Wired Ethernet.
 * Esimerkkejä: `lo` = loopback adapteri, `ensp1s0` = langallinen Ethernet verkkokortti, `wlp4s0` = wifi (langaton) verkkokortti.
 * Kuinka tarkastaa interfacet : `ip a`
 
 ## a) Linux
+Kali linux on valmiiksi asennettuna pöytäkoneelle. Alustana virtualbox ja host-koneena Windows 11.
 
 ## b) Ei voi kalastaa
+
+Bootataan kali ja katsotaan interfacejen tilanne komennolla `ip a`. Nähdään interface `eth0` ylhäällä `state UP`. Todennetaan internet yhteys pingaamalla googlen nimipalvelua neljän icmp paketin verran 
+`ping -c4 8.8.8.8`.
+
+
 
 ## c) Wireshark
 

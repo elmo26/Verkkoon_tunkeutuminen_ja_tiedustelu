@@ -49,7 +49,9 @@ Päivityksen jälkeen starttasin wiresharkin komennolla `wireshark` ja aloitin l
 
 ## d) Oikeesti TCP/IP 
 
-Tässä avasin siepatusta liikenteestä ensimmäisen paketin. Sovelluskerroksen (application layer) protokollana on DNS, eli kysessä on osoitekysely. Kuljetuksekerroksen (Transport layer) protokollana on UDP ja kohdeporttina 53, mitkä ovat DNS oletusportti ja protokolla (toki myös tcp/53 on varattu DNS:lle). Verkkokerroksen (internet layer) osalta näkyy että protokolla on ipv4. Kohdeosoitteen ja lähtevän osoitteen osalta, kuten arvata saattaa, kohdeosoite on lähiverkon default gateway, lähtevä osoite virtuaalikone.
+Tässä avasin siepatusta liikenteestä ensimmäisen paketin. Sovelluskerroksen (application layer) protokollana on DNS, eli kysessä on osoitekysely. Kuljetuksekerroksen (Transport layer) protokollana on UDP ja kohdeporttina 53, mitkä ovat DNS oletusportti ja protokolla (toki myös tcp/53 on varattu DNS:lle). 
+
+Verkkokerroksen (internet layer) osalta näkyy että protokolla on ipv4. Kohdeosoitteen ja lähtevän osoitteen osalta, kuten arvata saattaa, kohdeosoite on lähiverkon default gateway, lähtevä osoite virtuaalikone.
 Viimeisenä nähdään siirtoyhteyskerros (link layer), josta näkee kohdeosoitteen ja lähtevän osoitteen MAC-osoitteet. Myös paketin koko (87 tavua) ja siepattava verkkokortti näkyvät.
 
 <img width="1046" height="770" alt="kuva" src="https://github.com/user-attachments/assets/6dcd6eab-e3a7-4347-b8ed-736342af1870" /> Kuva 4. TCP/IP malli yksittäisessä paketissa.

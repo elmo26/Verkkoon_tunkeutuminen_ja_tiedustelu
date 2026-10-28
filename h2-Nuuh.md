@@ -29,7 +29,7 @@ Kuten kuvasta näkyy, internetyhteys oli ylhäällä.
 
 
 
-Sain ajettua internetyhteyden alas komennolla `sudo ip link set eth0 down` [(Geeksforgeeks 2024)](https://www.geeksforgeeks.org/linux-unix/disabling-and-enabling-an-interface-on-linux-system/).
+Sain ajettua internetyhteyden alas komennolla `sudo ip link set eth0 down` [(GeeksForGeeks 2024)](https://www.geeksforgeeks.org/linux-unix/disabling-and-enabling-an-interface-on-linux-system/).
 Tämän jälkeen näin `ip a` komennolla, että interface `eth0` on tilassa `DOWN`. Varmistin vielä  yhteyden toimimattomuuden yrittämällä pingata googlen nimipalvelua komennolla `ping -c4 8.8.8.8`. Vastauksena
 Sain: `Ping: connect: Network is unreachable`.
 

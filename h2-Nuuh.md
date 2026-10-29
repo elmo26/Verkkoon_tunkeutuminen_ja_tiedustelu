@@ -59,6 +59,10 @@ Viimeisenä nähdään siirtoyhteyskerros (link layer), josta näkee kohdeosoitt
 
 ## e) Mitäs tuli surffattua
 
+Avasin surfing-secure.pcap:in ja aloin muodostamaan yleiskuvaa liikenteestä katsomalla ensin pakettien määrän ja sieppaus ajan: alle 300 pakettia ja noin 7,5 sekuntia (joskin noin 4 sekunnin tauko keskellä capturea, joten voi olla että se keskeytettiin ja aloitettiin uudelleen.)  Sitten katsomalla kohdasta statistics->protocol hierarchy, katsoin, että mistä protokollista liikenne koostuu. Suurin osa TCP-liikennettä, pieni osa UDP-liikennettä, ja siitä suurin osa DNS-liikennettä. Katsoin myös nopeasti statistics->endpoints, että montako eri osoitetta löytyy: Ipv4-osotteita oli 7, ipv6 ei esiintynyt kaappauksessa lainkaan.
+
+DNS-kyselyiden perusteella ja yleisesti TCP ja TLS liikenteiden perustella voi sanoa, että kyseisessä kaappauksessa esiintyy perus weppiliikennettä eli https liikennettä. DNS-kyselyissä esiintyviä domaineja mm. www.google.com, terokarvinen.com, terokarvinen.com useita alidomaineja. 
+
 ## f) Vapaaehtoinen, vaikea: Mitä selainta käyttäjä käyttää? 
 
 ## g) Minkä merkkinen verkkokortti käyttäjällä on? 

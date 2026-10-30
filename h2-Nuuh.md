@@ -51,8 +51,7 @@ Päivityksen jälkeen starttasin wiresharkin komennolla `wireshark` ja aloitin l
 
 Tässä avasin siepatusta liikenteestä ensimmäisen paketin. Sovelluskerroksen (application layer) protokollana on DNS, eli kysessä on osoitekysely. Kuljetuksekerroksen (Transport layer) protokollana on UDP ja kohdeporttina 53, mitkä ovat DNS oletusportti ja protokolla (toki myös tcp/53 on varattu DNS:lle). 
 
-Verkkokerroksen (internet layer) osalta näkyy että protokolla on ipv4. Kohdeosoitteen ja lähtevän osoitteen osalta, kuten arvata saattaa, kohdeosoite on lähiverkon default gateway, lähtevä osoite virtuaalikone.
-Viimeisenä nähdään siirtoyhteyskerros (link layer), josta näkee kohdeosoitteen ja lähtevän osoitteen MAC-osoitteet. Myös paketin koko (87 tavua) ja siepattava verkkokortti näkyvät.
+Verkkokerroksen (internet layer) osalta näkyy että protokolla on ipv4. Kohdeosoitteen ja lähtevän osoitteen osalta, kuten arvata saattaa, kohdeosoite on lähiverkon default gateway, lähtevä osoite virtuaalikoneeen eth0 verkkokortti. Viimeisenä nähdään siirtoyhteyskerros (link layer), josta näkee kohdeosoitteen ja lähtevän osoitteen MAC-osoitteet. Myös paketin koko (87 tavua) ja siepattava verkkokortti näkyvät.
 
 <img width="1046" height="770" alt="kuva" src="https://github.com/user-attachments/assets/6dcd6eab-e3a7-4347-b8ed-736342af1870" /> Kuva 4. TCP/IP malli yksittäisessä paketissa.
 
@@ -61,7 +60,7 @@ Viimeisenä nähdään siirtoyhteyskerros (link layer), josta näkee kohdeosoitt
 
 Avasin surfing-secure.pcap:in ja aloin muodostamaan yleiskuvaa liikenteestä katsomalla ensin pakettien määrän ja sieppaus ajan: alle 300 pakettia ja noin 7,5 sekuntia (joskin noin 4 sekunnin tauko keskellä capturea, joten voi olla että se keskeytettiin ja aloitettiin uudelleen.)  Sitten katsomalla kohdasta statistics->protocol hierarchy, katsoin, että mistä protokollista liikenne koostuu. Suurin osa TCP-liikennettä, pieni osa UDP-liikennettä, ja siitä suurin osa DNS-liikennettä. Katsoin myös nopeasti statistics->endpoints, että montako eri osoitetta löytyy: Ipv4-osotteita oli 7, ipv6 ei esiintynyt kaappauksessa lainkaan.
 
-DNS-kyselyiden perusteella ja yleisesti TCP ja TLS liikenteiden perustella voi sanoa, että kyseisessä kaappauksessa esiintyy perus weppiliikennettä eli https liikennettä. DNS-kyselyissä esiintyviä domaineja mm. www.google.com, terokarvinen.com, terokarvinen.com useita alidomaineja. 
+DNS-kyselyiden perusteella ja yleisesti TCP ja TLS liikenteiden perustella voi sanoa, että kyseisessä kaappauksessa esiintyy perus weppiliikennettä eli https liikennettä. DNS-kyselyissä esiintyviä domaineja mm. www.google.com, terokarvinen.com ja terokarvinen.com:in useita alidomaineja. 
 
 ## f) Vapaaehtoinen, vaikea: Mitä selainta käyttäjä käyttää? 
 

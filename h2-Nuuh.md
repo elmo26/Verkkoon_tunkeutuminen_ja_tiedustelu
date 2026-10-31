@@ -60,13 +60,27 @@ Verkkokerroksen (internet layer) osalta näkyy että protokolla on ipv4. Kohdeos
 
 Avasin surfing-secure.pcap:in ja aloin muodostamaan yleiskuvaa liikenteestä katsomalla ensin pakettien määrän ja sieppaus ajan: alle 300 pakettia ja noin 7,5 sekuntia (joskin noin 4 sekunnin tauko keskellä capturea, joten voi olla että se keskeytettiin ja aloitettiin uudelleen.)  Sitten katsomalla kohdasta statistics->protocol hierarchy, katsoin, että mistä protokollista liikenne koostuu. Suurin osa TCP-liikennettä, pieni osa UDP-liikennettä, ja siitä suurin osa DNS-liikennettä. Katsoin myös nopeasti statistics->endpoints, että montako eri osoitetta löytyy: Ipv4-osotteita oli 7, ipv6 ei esiintynyt kaappauksessa lainkaan.
 
-DNS-kyselyiden perusteella ja yleisesti TCP ja TLS liikenteiden perustella voi sanoa, että kyseisessä kaappauksessa esiintyy perus weppiliikennettä eli https liikennettä. DNS-kyselyissä esiintyviä domaineja mm. www.google.com, terokarvinen.com ja terokarvinen.com:in useita alidomaineja. 
+DNS-kyselyiden perusteella ja yleisesti TCP ja TLS liikenteiden perustella voi sanoa, että kyseisessä kaappauksessa esiintyy pääasiassa weppiliikennettä eli https liikennettä. 
 
 ## f) Vapaaehtoinen, vaikea: Mitä selainta käyttäjä käyttää? 
+
+Aloitin tehtävän käymällä läpi kaappauksen ja etsimällä salaamatonta liikenettä, jota en löytänyt. Tämän jälkeen aloin etsimään netistä tietoa, miten käyttäjän selaimen voisi selvittää salatusta liikenteestä. Löysin artikkelin JA3 ja JA4 tiivisteistä.  [JA3 and JA4 Compared](https://www.coronium.io/blog/ja3-vs-ja4). Käytännössä kyseessä on siis kaksi eri tavalla toteutettua fingerprinttaus algoritmia. Algoritmit muodostetaan TLS Client hello pakettien perusteella, joissa salauksesta sovitaan ennen http-liikenteen lähettämistä.
+
+<img width="1842" height="706" alt="kuva" src="https://github.com/user-attachments/assets/a46c0b7d-381d-40bf-92c0-83902e43ef9f" />
+Kuva 5. TLS-paketti, sisältää JA3, JA4 arvot.
+
+Netistä löytyi useita työkaluja JA4-tiivisteiden tunnistamiseen, kuten usefoil.com/ja4 , jota itse käytin.
+
+<img width="1094" height="768" alt="kuva" src="https://github.com/user-attachments/assets/1e41d279-b97c-4bfb-bfbb-f8a4da7bd333" />
+Kuva 6. JA4-tiivisteen tunnistus,
+
+Kuten kuvasta näkyy, sivusto ilmoitti että kyseinen JA4-tiiviste löytyi sivun referenssitietokannasta ja viittaa Firefox-selaimeen. Kaappauksessa käytetty selain on siis Firefox.
 
 ## g) Minkä merkkinen verkkokortti käyttäjällä on? 
 
 ## h) Millä weppipalvelimella käyttäjä on surffaillut?
+
+DNS-kyselyissä esiintyviä domaineja mm. www.google.com, terokarvinen.com ja terokarvinen.com:in useita alidomaineja. 
 
 ## i) Analyysi
 
@@ -80,3 +94,5 @@ Karvinen, T.2025 Wireshark - Getting Started: https://terokarvinen.com/wireshark
 Karvinen, T.2025 Network Interface Names On Linux: https://terokarvinen.com/network-interface-linux/ Luettu 28.10.2026
 
 geeksforgeeks, 29.1.2024. Disabling and Enabling an Interface on Linux System: https://www.geeksforgeeks.org/linux-unix/disabling-and-enabling-an-interface-on-linux-system/ Luettu 28.10.2026
+
+Coronium.io, s.a. a. JA3 and JA4 compared: https://www.coronium.io/blog/ja3-vs-ja4 Luettu 31.10.2026

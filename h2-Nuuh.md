@@ -69,7 +69,7 @@ Aloitin tehtävän käymällä läpi kaappauksen ja etsimällä salaamatonta lii
 <img width="1842" height="706" alt="kuva" src="https://github.com/user-attachments/assets/a46c0b7d-381d-40bf-92c0-83902e43ef9f" />
 Kuva 5. TLS-paketti, sisältää JA3, JA4 arvot.
 
-Netistä löytyi useita työkaluja JA4-tiivisteiden tunnistamiseen, kuten usefoil.com/ja4 , jota itse käytin.
+Netistä löytyi useita työkaluja JA4-tiivisteiden tunnistamiseen, kuten www.usefoil.com/ja4 , jota itse käytin.
 
 <img width="1094" height="768" alt="kuva" src="https://github.com/user-attachments/assets/1e41d279-b97c-4bfb-bfbb-f8a4da7bd333" />
 Kuva 6. JA4-tiivisteen tunnistus,

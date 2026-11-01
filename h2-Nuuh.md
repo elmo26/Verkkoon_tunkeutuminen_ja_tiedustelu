@@ -101,9 +101,10 @@ Käytin tässä analyysissä samaa tallentamaani kaappausta jonka toteutin C-koh
 
 
 <img width="1578" height="240" alt="kuva" src="https://github.com/user-attachments/assets/fae4a3b2-b323-4e5e-a2d8-277a0fe8e816" />
+
 Kuva 8. Tarkemmin tarkasteltavat paketit
 
-Yleistiedot kaappauksesta:
+#### Yleistiedot kaappauksesta:
 * Virtuaalikoneen `eth0` verkkokortin MAC-osoite `08:00:27:de:11:e2`, ip-osoite `10.0.2.15`
 * oletusyhdyskäytävän  MAC-osoite `52:54:00:12:35:00`, ip-osoite `192.168.10.1`
 

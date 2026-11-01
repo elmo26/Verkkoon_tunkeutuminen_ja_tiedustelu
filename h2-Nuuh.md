@@ -97,14 +97,35 @@ DNS-kyselyiden perusteella käyttäjä on surffaillut seuraavilla weppipalvelimi
 
 ## i) Analyysi
 
-Käytin tässä analyysissä samaa tallentamaani kaappausta jonka toteutin C-kohdassa. Kaappauksen toteutuksesta ja ympäristöstä enemmän tietoa C-kohdassa. Otin tarkasteluun neljä ensimmäistä pakettia, sillä ohjeissa kehotettiin tarkastelemaan todella pientä määrää liikennettä. Tässä on tarkastelussa vain vain pieni määrä paketteja.
+Käytin tässä analyysissä samaa tallentamaani kaappausta jonka toteutin C-kohdassa. Kaappauksen toteutuksesta ja ympäristöstä enemmän tietoa C-kohdassa. Otin tarkasteluun pienen määrän paketteja, sillä ohjeissa kehotettiin tarkastelemaan todella pientä määrää liikennettä. Tässä on tarkastelussa vain vain pieni määrä paketteja.
 
 
 <img width="1578" height="240" alt="kuva" src="https://github.com/user-attachments/assets/fae4a3b2-b323-4e5e-a2d8-277a0fe8e816" />
-
-Paketissa yksi näen liikenteen lähtevän `eth0` verkkokortista, jonka tiedän tehtävän B-kohdan perusteella olevan virtuaalikoneen virtuaalinen verkkokortti.
-
 Kuva 8. Tarkemmin tarkasteltavat paketit
+
+Yleistiedot kaappauksesta:
+* Virtuaalikoneen `eth0` verkkokortin MAC-osoite `08:00:27:de:11:e2`, ip-osoite `10.0.2.15`
+* oletusyhdyskäytävän  MAC-osoite `52:54:00:12:35:00`, ip-osoite `192.168.10.1`
+
+#### Ensimmäiset 4 pakettia - DNS-kyselyt
+
+* Asiakas (virtuaalikone) ei tiedä, missä osoitteessa on safebrowsing.googleapis.com
+* Paketit 1,2: Asiakas kysyy osoitteita ipv4 (A) ja ipv6 (AAAA) tietueista domainiin safebrowsing.googleapis.com
+* Vastaukset kyselyihin tulevat paketeissa 3 ja 4 : A-tietue `64.233.162.95`, AAAA-tietue: `2a00:1450:4010:c20::5f`
+
+#### TCP-yhteyden muodostus (Three way handshake)
+* Paketti 5 (SYN): Asiakas lähettää yhteydenottopyynnön portista 47264 palvelimen porttiin 443
+* Paketti 6 (SYN,ACK): Palvelin kuittaa pyynnön, hyväksyy yhteyden avaamisen
+* Paketti 7 (ACK) Asiakas kuittaa palvelimen vastauksen. TCP-käsittely on valmis ja yhtyes on auki
+
+#### TLS-käsittely ja salattu tiedonsiirto
+* Paketti 8 Client Hello, asiakas aloittaa TLS-kättelyn, ilmoittaa mm. tukemansa salausmenetelmät
+* Paketit 9-10 (ACK): Palvelin kuittaa vastaanottaneensa asiakkaan tiedot
+* Paketti 11 (Server Hello): Palvelin valitsee salaustavan, siirtyy salattuun tilaan.
+* Paketit 12-13: Asiakkaan kuittaus, palvelimen dataa
+* Paketti 14: Application data: yhteys salattu - > varsinainen sovelluskerroksen data alkaa liikkumaan
+
+
 
 
 

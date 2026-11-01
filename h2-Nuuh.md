@@ -64,7 +64,9 @@ DNS-kyselyiden perusteella ja yleisesti TCP ja TLS liikenteiden perustella voi s
 
 ## f) Vapaaehtoinen, vaikea: Mitä selainta käyttäjä käyttää? 
 
-Aloitin tehtävän käymällä läpi kaappauksen ja etsimällä salaamatonta liikenettä, jota en löytänyt. Tämän jälkeen aloin etsimään netistä tietoa, miten käyttäjän selaimen voisi selvittää salatusta liikenteestä. Löysin artikkelin JA3 ja JA4 tiivisteistä.  [JA3 and JA4 Compared](https://www.coronium.io/blog/ja3-vs-ja4). Käytännössä kyseessä on siis kaksi eri tavalla toteutettua fingerprinttaus algoritmia. Algoritmit muodostetaan TLS Client hello pakettien perusteella, joissa salauksesta sovitaan ennen http-liikenteen lähettämistä.
+Aloitin tehtävän käymällä läpi kaappauksen ja etsimällä salaamatonta liikenettä, jota en löytänyt. Tämän jälkeen aloin etsimään netistä tietoa, miten käyttäjän selaimen voisi selvittää salatusta liikenteestä. Löysin artikkelin JA3 ja JA4 tiivisteistä.  [JA3 and JA4 Compared](https://www.coronium.io/blog/ja3-vs-ja4). Käytännössä kyseessä on siis kaksi eri tavalla toteutettua fingerprinttaus algoritmia, jotka sisältävät teknistä tietoa esim. käytetystä enkryptiotavasta. Algoritmit muodostetaan TLS Client hello pakettien perusteella, joissa salauksesta sovitaan ennen http-liikenteen lähettämistä.
+
+Eri selaimet käyttävät eri kirjastoja salauksiin, joten tätä kautta selain voidaan tunnistaa.
 
 <img width="1842" height="706" alt="kuva" src="https://github.com/user-attachments/assets/a46c0b7d-381d-40bf-92c0-83902e43ef9f" />
 Kuva 5. TLS-paketti, sisältää JA3, JA4 arvot.
@@ -76,13 +78,26 @@ Kuva 6. JA4-tiivisteen tunnistus,
 
 Kuten kuvasta näkyy, sivusto ilmoitti että kyseinen JA4-tiiviste löytyi sivun referenssitietokannasta ja viittaa Firefox-selaimeen. Kaappauksessa käytetty selain on siis Firefox.
 
-## g) Minkä merkkinen verkkokortti käyttäjällä on? 
+## g) Minkä merkkinen verkkokortti käyttäjällä on?
+
+Käyttäjän verkkokortin merkin tunnistamiseen tarvitsemme MAC-osoitteen OUI(Organizationally unique identifier) osan. Ensin on tiedettävä käyttäjän ip-osoite, jotta katsomme oikeaa pakettia. DNS-liikenteen perusteella käyttäjän ip-osoite on oletettavasti `192.168.122.7`, sillä tästä osoitteesta lähtee DNS-kyselyt ja vastaukset tulevat tähän osoitteeseen. MAC-osoitteet löytyvät protokollapinosta link layerin alta, Ethernet-kohdan alta.
+IEEE jakaa kaikille laitevalmistajille omat OUI:t, joista voidaan nähdä laitteen MAC-osoitteen perusteella, kenen valmistama se on.
+
+<img width="808" height="187" alt="kuva" src="https://github.com/user-attachments/assets/fe519d8f-8552-4301-a762-aa49c3a9bb45" />
+
+Kuva 7. capture.pcap kaappauksen ensimmäinen paketti, DNS-kysely. Mac-osoitteet näkyvissä.
+
+Source MAC eli lähtevä MAC-osoite `52:54:00:2f:e1:e5` on merkitty LAA (Locally administered adress), eli toisinsanoen kyseessä ei ole verkkokortin raudassa oleva MAC, vaan ohjelmallisesti toteutettu MAC-osoite, josta on mahdoton päätellä valmistajaa, sillä sellaista LAA-osoitteille ole. MAC-lookup millä tahansa netistä löytyvällä sivulla antaa saman vastauksen: LAA-osoite, ei OUI-osaa.
+
 
 ## h) Millä weppipalvelimella käyttäjä on surffaillut?
 
-DNS-kyselyissä esiintyviä domaineja mm. www.google.com, terokarvinen.com ja terokarvinen.com:in useita alidomaineja. 
+DNS-kyselyiden perusteella käyttäjä on surffaillut seuraavilla weppipalvelimilla: www.google.com, terokarvinen.com, gc.zgo.at(CNAME) -> goatcounter.netlify.com ja terokarvinen.goatcounter.com
+
 
 ## i) Analyysi
+
+
 
 ## Lähteet
 Karvinen, T.2026 Verkkoon tunkeutuminen ja tiedustelu: oppitunti 27.10.2026

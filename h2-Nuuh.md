@@ -85,9 +85,9 @@ IEEE jakaa kaikille laitevalmistajille omat OUI:t, joista voidaan nähdä laitte
 
 <img width="808" height="187" alt="kuva" src="https://github.com/user-attachments/assets/fe519d8f-8552-4301-a762-aa49c3a9bb45" />
 
-Kuva 7. capture.pcap kaappauksen ensimmäinen paketti, DNS-kysely. Mac-osoitteet näkyvissä.
+Kuva 7. surfing-secure.pcap kaappauksen ensimmäinen paketti, DNS-kysely. Mac-osoitteet näkyvissä.
 
-Source MAC eli lähtevä MAC-osoite `52:54:00:2f:e1:e5` on merkitty LAA (Locally administered adress), eli toisinsanoen kyseessä ei ole verkkokortin raudassa oleva MAC, vaan ohjelmallisesti toteutettu MAC-osoite, josta on mahdoton päätellä valmistajaa, sillä sellaista LAA-osoitteille ole. MAC-lookup millä tahansa netistä löytyvällä sivulla antaa saman vastauksen: LAA-osoite, ei OUI-osaa.
+Source MAC eli lähtevä MAC-osoite `52:54:00:2f:e1:e5` on merkitty LAA (Locally administered adress), eli toisinsanoen kyseessä ei ole verkkokortin raudassa oleva MAC, vaan ohjelmallisesti toteutettu MAC-osoite, josta on mahdoton päätellä valmistajaa, sillä sellaista LAA-osoitteille ei ole. MAC-lookup millä tahansa netistä löytyvällä sivulla antaa saman vastauksen: LAA-osoite, ei OUI-osaa.
 
 
 ## h) Millä weppipalvelimella käyttäjä on surffaillut?
@@ -96,6 +96,15 @@ DNS-kyselyiden perusteella käyttäjä on surffaillut seuraavilla weppipalvelimi
 
 
 ## i) Analyysi
+
+Käytin tässä analyysissä samaa tallentamaani kaappausta jonka toteutin C-kohdassa. Kaappauksen toteutuksesta ja ympäristöstä enemmän tietoa C-kohdassa. Otin tarkasteluun neljä ensimmäistä pakettia, sillä ohjeissa kehotettiin tarkastelemaan todella pientä määrää liikennettä. Tässä on tarkastelussa vain vain pieni määrä paketteja.
+
+
+<img width="1578" height="240" alt="kuva" src="https://github.com/user-attachments/assets/fae4a3b2-b323-4e5e-a2d8-277a0fe8e816" />
+
+Paketissa yksi näen liikenteen lähtevän `eth0` verkkokortista, jonka tiedän tehtävän B-kohdan perusteella olevan virtuaalikoneen virtuaalinen verkkokortti.
+
+Kuva 8. Tarkemmin tarkasteltavat paketit
 
 
 

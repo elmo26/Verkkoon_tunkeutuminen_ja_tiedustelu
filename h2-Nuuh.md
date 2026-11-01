@@ -64,7 +64,7 @@ DNS-kyselyiden perusteella ja yleisesti TCP ja TLS liikenteiden perustella voi s
 
 ## f) Vapaaehtoinen, vaikea: Mitä selainta käyttäjä käyttää? 
 
-Aloitin tehtävän käymällä läpi kaappauksen ja etsimällä salaamatonta liikenettä, jota en löytänyt. Tämän jälkeen aloin etsimään netistä tietoa, miten käyttäjän selaimen voisi selvittää salatusta liikenteestä. Löysin artikkelin JA3 ja JA4 tiivisteistä.  [JA3 and JA4 Compared](https://www.coronium.io/blog/ja3-vs-ja4). Käytännössä kyseessä on siis kaksi eri tavalla toteutettua fingerprinttaus algoritmia, jotka sisältävät teknistä tietoa esim. käytetystä enkryptiotavasta. Algoritmit muodostetaan TLS Client hello pakettien perusteella, joissa salauksesta sovitaan ennen http-liikenteen lähettämistä.
+Aloitin tehtävän käymällä läpi kaappauksen ja etsimällä salaamatonta liikenettä, jota en löytänyt. Tämän jälkeen aloin etsimään netistä tietoa, miten käyttäjän selaimen voisi selvittää salatusta liikenteestä. Löysin artikkelin JA3 ja JA4 tiivisteistä: [JA3 and JA4 Compared](https://www.coronium.io/blog/ja3-vs-ja4). Käytännössä kyseessä on siis kaksi eri tavalla toteutettua algoritmia, jotka sisältävät teknistä tietoa esim. käytetystä salausalgoritmeista. Algoritmit muodostetaan TLS Client hello pakettien perusteella, joissa salauksesta sovitaan ennen http-liikenteen lähettämistä.
 
 Eri selaimet käyttävät eri kirjastoja salauksiin, joten tätä kautta selain voidaan tunnistaa.
 

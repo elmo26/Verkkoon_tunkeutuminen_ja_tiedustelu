@@ -21,6 +21,8 @@
 
 ## b) rtl_433 asennus ja ajo
 
+Asensin rtl_433 ohjelman kali-linux virtuaalikoneeseen komennolla `sudo apt-get update && sudo apt-get istall rtl-433`
+
 
 ## c) Automaattinen analyysi
 

@@ -79,7 +79,10 @@ Tässähän ei mikään muuttunut ja näyte näyttäisi olevan sama kuin kohdass
 ## e) Ultimate: URH asennus
 
 Aloitin tehtävän jälleen katsomalla ohjeet tehtäväsivun lopusta (Karvinen, 2026), jonka jälkeen aloitin pipx:n asennuksen komennoilla `sudo apt-get update && sudo apt-get install pipx`.
-Tämän jälkeen asensin Ultimate Radio Hackerin komennolla `pipx install urh`
+Tämän jälkeen asensin Ultimate Radio Hackerin komennolla `pipx install urh`.
+
+<img width="1013" height="322" alt="kuva" src="https://github.com/user-attachments/assets/1f3a991e-c406-4df1-863e-dfdf97f7d008" />
+
 
   ### f) yleiskuva
 

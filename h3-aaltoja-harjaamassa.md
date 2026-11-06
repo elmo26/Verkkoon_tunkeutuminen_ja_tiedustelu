@@ -64,8 +64,7 @@ Kokeilin ajaa suoraan alkuperäisen `.complex16s` päätteisen tiedoston ja se m
 Kuva 4. Alkuperäisen tiedoston ajo.
 
 
-
-Selvittelin hieman asiaa ja ilmeisesti `cs8` ja `complex16s` on sama tiedostotyyppi eri merkintätavalla [(rtl_433 dokumentaatio, IQ_FORMATS.md)](https://github.com/merbanan/rtl_433/blob/ac1e4a8c5a36fb90e3b06c0f01cef00bb3b2614d/docs/IQ_FORMATS.md#file-name-meta-data), ja rtl_433 tukee tätä tiedostotyyppiä, joskin `cu8` on rtl_433-ohjelman oletustiedostotyyppi. En sitten tiedä haettiinko cu8-tiedostotyyppiä tässä tehtävässä, niin ei ainakaan tehtävänannossa lukenut.
+Selvittelin hieman asiaa ja ilmeisesti `cs8` ja `complex16s` on sama tiedostotyyppi eri merkintätavalla [(rtl_433 dokumentaatio, IQ_FORMATS.md)](https://github.com/merbanan/rtl_433/blob/ac1e4a8c5a36fb90e3b06c0f01cef00bb3b2614d/docs/IQ_FORMATS.md#file-name-meta-data), ja rtl_433 tukee tätä tiedostotyyppiä, joskin `cu8` on rtl_433-ohjelman oletustiedostotyyppi.
 
 Kokeilin kuitenkin muuttaa tiedoston ohjeiden mukaan. Alkuperäinen tiedosto oli `Recorded_HackRF-20250412_113805-443_92MHz-MSps-2MHz.complex16s` ja sain ohjeiden perusteella siitä tiedoston `näyte_433.92M_2000k.cs8` Komennolla
 `cp Recorded-HackRF-20250411_183354-433_92MHz-2MSps-2MHz.complex16s nayte_433.92M_2000k.cs8`
@@ -76,6 +75,8 @@ Kuva 4. Tiedoston nimenvaihto ja ajo.
 
 Tässähän ei mikään muuttunut ja näyte näyttäisi olevan sama kuin kohdassa c. Myös näytteen analyysi siis siellä.
 
+Jälkikäteen selvitin kun kaveri ei saanut ajettua tuota complex16s-tiedostoa, että kalissa rtl_433-ohjelma on uudemmassa versiossa (25.12) vs debian (25.02). Mitä ilmeisemmin uudessa versiossa rtl osaa ajaa complex16s-tiedostot suoraan, sillä mitään muuta selitystä en tälle keksinyt.
+
 ## e) Ultimate: URH asennus
 
 Aloitin tehtävän jälleen katsomalla ohjeet tehtäväsivun lopusta (Karvinen, 2026), jonka jälkeen aloitin pipx:n asennuksen komennoilla `sudo apt-get update && sudo apt-get install pipx`.
@@ -85,6 +86,8 @@ Tämän jälkeen asensin Ultimate Radio Hackerin komennolla `pipx install urh`.
 
 
   ### f) yleiskuva
+
+  Avasin URH-ohjelman komennolla `urh`, menin ohjelmassa file-> open -> ja `1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s`.
 
   ### g) Bittistä
 

@@ -25,9 +25,11 @@ Alustana kaikissa tehtävissä oli kali-linux virualboxin päällä, host käytt
 
 Kali-linuxissa on rtl_433 paketti saatavilla .
 
-Asensin rtl_433 ohjelman komennolla `sudo apt-get update && sudo apt-get istall rtl-433`
+Asensin rtl_433 ohjelman komennolla `sudo apt-get update && sudo apt-get istall rtl-433` ja tarkistin että se on ajettavissa komennolla `rtl_433`
 
+<img width="826" height="224" alt="rtl_433" src="https://github.com/user-attachments/assets/08f1dd27-6f0e-4eb2-b946-0495653629e4" />
 
+Kuva 1. rtl_433 asennettuna ja asennuskomento haettu esille.
 
 ## c) Automaattinen analyysi
 

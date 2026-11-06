@@ -17,7 +17,7 @@
 * URH:n asetuksia voi muuttaa tarkemmiksi ja virhemarginaaleja pienentää.
 * Tarkastele symbolit yksi kerrallaan: selvitä pituus bitteinä. 
 * URH:n analysis-sivun takana on dekoodaus-menetelmiä.
-* rtl_433 varten: selvitä modulaatio ja lähetysväli
+* rtl_433: selvitä modulaatio ja lähetysväli ja dekoodaa signaali niiden avulla
 
 ## b) rtl_433 asennus ja ajo
 

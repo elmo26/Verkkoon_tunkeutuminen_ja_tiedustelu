@@ -33,9 +33,23 @@ Kuva 1. rtl_433 asennettuna ja asennuskomento haettu esille.
 
 ## c) Automaattinen analyysi
 
-Latasin näytteen ja avasin sen rtl_433 ohjelmalla komennolla `rtl_433 Converted_433.92M_2000k.cs8`
+Latasin tehtävässä osoitetun näytteen ja avasin sen rtl_433 ohjelmalla komennolla `rtl_433 Converted_433.92M_2000k.cs8`
+
 
 <img width="1470" height="864" alt="kuva" src="https://github.com/user-attachments/assets/18c43dca-3ace-4627-8db6-c02952846f92" />
+Kuva 2. rtl_433 avattu näyte `Converted_433.92M_2000k.cs8`
+
+`8785315` ID/House Code kentässä viittaa lähettävän laitteen tunnisteeseen. Ideana se, että jos useampi laite on samalla taajuudella, ei kaikki laitteet mene yhdestä signaalista päälle. 
+
+Näytteessä näyttäisi näkyvän neljä signaalia, jotka kaikki listataan rtl_433 toimesta kolmeen kertaan. Tämän voi päätellä siitä, että aika sekä id tai "House Code", kuten kuvastakin näkyy, 
+ovat kolmella ensimmäisellä rivillä samat. Nimet, jotka toistuvat samalla logiikalla koko näytteen ajan ovat `KlikAanKlikUit-Switch`, `Proove-Security` ja `Nexa-Security` sekä id/House code arvolla `8785315`.
+
+Kurkkasin Corelius-tiivistelmässä mainitusta tietokannasta dekoodereita näytteessä näkyvillä nimillä ja löysin kolme erillistä dekooderia. Nämä ovat numerot 15, 51 ja 96. Yhdessä oli mainittu kaikki kolme merkkiä.
+Oletukseni on, että kolme eri valmistajaa käyttää samaa lähetintä tms: mainitaan dekooderissa #51.
+
+<img width="1084" height="401" alt="kuva" src="https://github.com/user-attachments/assets/499927d8-11a5-4248-a422-b9ae5cee28a8" />
+Kuva 3. Kaksi kolmesta eri dekooderista - Samankaltaisia.
+
 
 
 ## d) Too complex 16?

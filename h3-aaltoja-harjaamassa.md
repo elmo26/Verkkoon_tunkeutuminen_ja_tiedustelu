@@ -1,6 +1,6 @@
 # h3 Aaltoja harjaamassa
 
-Alustana kaikissa tehtävissä oli kali-linux virualboxin päällä, host käyttöjärjestelmä Windows 11.
+Alustana kaikissa tehtävissä oli Kali Linux virualboxin päällä, host käyttöjärjestelmä Windows 11.
 
 ## x) Lue ja tiivistä
 
@@ -23,7 +23,7 @@ Alustana kaikissa tehtävissä oli kali-linux virualboxin päällä, host käytt
 
 ## b) rtl_433 asennus ja ajo
 
-Kali-linuxissa on rtl_433 paketti saatavilla .
+Kali Linuxissa on rtl_433 paketti saatavilla.
 
 Asensin rtl_433 ohjelman komennolla `sudo apt-get update && sudo apt-get istall rtl-433` ja tarkistin että se on ajettavissa komennolla `rtl_433`
 

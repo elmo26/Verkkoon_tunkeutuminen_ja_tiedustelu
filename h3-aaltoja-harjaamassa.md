@@ -80,14 +80,25 @@ Jälkikäteen selvitin kun kaveri ei saanut ajettua tuota complex16s-tiedostoa, 
 ## e) Ultimate: URH asennus
 
 Aloitin tehtävän jälleen katsomalla ohjeet tehtäväsivun lopusta (Karvinen, 2026), jonka jälkeen aloitin pipx:n asennuksen komennoilla `sudo apt-get update && sudo apt-get install pipx`.
-Tämän jälkeen asensin Ultimate Radio Hackerin komennolla `pipx install urh`.
+Tämän jälkeen asensin Ultimate Radio Hackerin komennolla `pipx install urh`. 
 
 <img width="1013" height="322" alt="kuva" src="https://github.com/user-attachments/assets/1f3a991e-c406-4df1-863e-dfdf97f7d008" />
-
+Kuva 5. URH asennus.
 
   ### f) yleiskuva
 
   Avasin URH-ohjelman komennolla `urh`, menin ohjelmassa file-> open -> ja `1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s`.
+
+  Avasin URH-ohjelmassa tiedoston signal-details kohdan ja päättelin tiedostonimestä näytteen taajuuden olevan `433.912MHz` sekä muutin sample rate kohdan `2.0M` eli 2 miljoonaa näytettä per sekunti. 
+  Täten näytteen kesto 2,75 sekuntia. Näytteen nauhoittamisajankohtaa en saanut selville.
+
+  
+  <img width="1431" height="430" alt="Näyttökuva 2026-11-07 013346" src="https://github.com/user-attachments/assets/28959bd0-87b1-4970-8ab2-59467e8435e7" />
+  Kuva 6. perustietoja näytteestä.
+  
+  Aloin katsomaan yleiskuvaa signaalista. Silmämääräisesti näyttää siltä, että näytteessä olisi kolme samanlaista signaalia.
+
+  <img width="1825" height="303" alt="kuva" src="https://github.com/user-attachments/assets/b89846be-c268-494c-815a-fa870236b408" />
 
   
 

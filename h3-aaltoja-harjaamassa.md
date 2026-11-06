@@ -10,7 +10,7 @@
 
 ### Cornelius 2022: [Decode 433.92 MHz weather station data](https://www.onetransistor.eu/2022/01/decode-433mhz-ask-signal.html) tiivistelmä
 * Signaalien dekoodaamiseen riittää tieto signaalin taajuudesta ja softaradio.
-* rtl_433 osaa automaattisesti dekoodata signaaleja. Kaikki tuetut signaalit löytyvät [tietokannasta](https://triq.org/explorer/)
+* rtl_433 osaa automaattisesti dekoodata signaaleja. Kaikki tuetut signaaliprotokollat ja laitteet löytyvät [tietokannasta](https://triq.org/explorer/)
 * URH:n avulla voi tallentaa, analysoida, muuttaa ja lähettää signaaleja. Lähettämiseen vaaditaan lähettävä laite.
 
 ### Lohner 2019: [Decoding ASK/OOK_PPM Signals with URH and rtl_433 ](https://github.karllohner.com/SDR/Decoding/Example_2019-01-24/) tiivistelmä
@@ -20,6 +20,7 @@
 * rtl_433 varten: selvitä modulaatio ja lähetysväli
 
 ## b) rtl_433 asennus ja ajo
+
 
 ## c) Automaattinen analyysi
 

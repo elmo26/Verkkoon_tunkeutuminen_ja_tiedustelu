@@ -62,7 +62,9 @@ Kokeilin ajaa suoraan alkuperäisen `.complex16s` päätteisen tiedoston ja se m
 <img width="1640" height="437" alt="kuva" src="https://github.com/user-attachments/assets/b26c3818-254c-4ff2-8237-a80c915f7e55" />
 Kuva 4. Alkuperäisen tiedoston ajo.
 
-Selvittelin hieman asiaa ja ilmeisesti .cs8 ja .complex16s on sama tiedostotyyppi eri merkintätavalla (rtl_433 dokumentaatio, IQ_FORMATS.md)[https://github.com/merbanan/rtl_433/blob/ac1e4a8c5a36fb90e3b06c0f01cef00bb3b2614d/docs/IQ_FORMATS.md#file-name-meta-data] ja rtl_433 tukee tätä tiedostotyyppiä.
+
+
+Selvittelin hieman asiaa ja ilmeisesti .cs8 ja .complex16s on sama tiedostotyyppi eri merkintätavalla [(rtl_433 dokumentaatio, IQ_FORMATS.md)](https://github.com/merbanan/rtl_433/blob/ac1e4a8c5a36fb90e3b06c0f01cef00bb3b2614d/docs/IQ_FORMATS.md#file-name-meta-data), ja rtl_433 tukee tätä tiedostotyyppiä.
 
 Kokeilin kuitenkin muuttaa tiedoston ohjeiden mukaan. Alkuperäinen tiedosto oli `Recorded_HackRF-20250412_113805-443_92MHz-MSps-2MHz.complex16s` ja sain ohjeiden perusteella siitä tiedoston `näyte_433.92M_2000k.cs8` Komennolla
 `cp Recorded-HackRF-20250411_183354-433_92MHz-2MSps-2MHz.complex16s nayte_433.92M_2000k.cs8`

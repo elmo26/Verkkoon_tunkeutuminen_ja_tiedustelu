@@ -2,6 +2,23 @@
 
 ## x) Lue ja tiivistä
 
+### Hubacek 2019: Universal Radio Hacker SDR Tutorial on 433 MHz radio plugs tiivistelmä [3:19-7:40](https://www.youtube.com/watch?v=sbqMqb6FVMY&t=199s)
+* Spectrum analyzer työkalulla on hyvä varmistaa, että signaalien sieppaaminen onnistuu ja varmistaa siepattavien signaalien taajuus.
+* Signaalin tarkka taajuus tulee valita signaalin keskiosasta.
+* Varmista signaalin modulaatiotapa ja bittien pituus oikeaksi.
+* Demodulaation jälkeen signaalin muotoa voi vaihtaa esim. heksadesimaaleiksi.
+
+### Cornelius 2022: [Decode 433.92 MHz weather station data](https://www.onetransistor.eu/2022/01/decode-433mhz-ask-signal.html) tiivistelmä
+* Signaalien dekoodaamiseen riittää tieto signaalin taajuudesta ja softaradio.
+* rtl_433 osaa automaattisesti dekoodata signaaleja. Kaikki tuetut signaalit löytyvät [tietokannasta](https://triq.org/explorer/)
+* URH:n avulla voi tallentaa, analysoida, muuttaa ja lähettää signaaleja. Lähettämiseen vaaditaan lähettävä laite.
+
+### Lohner 2019: [Decoding ASK/OOK_PPM Signals with URH and rtl_433 ](https://github.karllohner.com/SDR/Decoding/Example_2019-01-24/) tiivistelmä
+* URH:n asetuksia voi muuttaa tarkemmiksi ja virhemarginaaleja pienentää.
+* Tarkastele symbolit yksi kerrallaan: selvitä pituus bitteinä. 
+* URH:n analysis-sivun takana on dekoodaus-menetelmiä.
+* rtl_433 varten: selvitä modulaatio ja lähetysväli
+
 ## b) rtl_433 asennus ja ajo
 
 ## c) Automaattinen analyysi

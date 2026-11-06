@@ -44,7 +44,7 @@ Kuva 2. rtl_433 avattu näyte `Converted_433.92M_2000k.cs8`
 Näytteessä näyttäisi näkyvän neljä signaalia, jotka kaikki listataan rtl_433 toimesta kolmeen kertaan. Tämän voi päätellä siitä, että aika sekä id tai "House Code", kuten kuvastakin näkyy, 
 ovat kolmella ensimmäisellä rivillä samat. Nimet, jotka toistuvat samalla logiikalla koko näytteen ajan ovat `KlikAanKlikUit-Switch`, `Proove-Security` ja `Nexa-Security` sekä id/House code arvolla `8785315`.
 
-Kurkkasin Corelius-tiivistelmässä mainitusta tietokannasta dekoodereita näytteessä näkyvillä nimillä ja löysin kolme erillistä dekooderia. Nämä ovat numerot 15, 51 ja 96. Yhdessä oli mainittu kaikki kolme merkkiä.
+Kurkkasin Corelius-tiivistelmässä mainitusta tietokannasta (https://triq.org/explorer/) dekoodereita näytteessä näkyvillä nimillä ja löysin kolme erillistä dekooderia. Nämä ovat numerot 15, 51 ja 96. Yhdessä oli mainittu kaikki kolme merkkiä.
 Oletukseni on, että kolme eri valmistajaa käyttää samaa lähetintä tms: mainitaan dekooderissa #51.
 
 <img width="1084" height="401" alt="kuva" src="https://github.com/user-attachments/assets/499927d8-11a5-4248-a422-b9ae5cee28a8" />
@@ -71,3 +71,5 @@ Karvinen, T 2026. Verkkoon tunkeutuminen ja tiedustelu:
 https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/ Luettu 6.11.2026
 
 Karvinen, T 2026. Verkkoon tunkeutuminen ja tiedustelu oppitunti 3.11.2026.
+
+TRIQ.ORG s.a. a Decoder & sample explorer: https://triq.org/explorer/ luettu 6.11

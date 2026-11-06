@@ -89,6 +89,8 @@ Tämän jälkeen asensin Ultimate Radio Hackerin komennolla `pipx install urh`.
 
   Avasin URH-ohjelman komennolla `urh`, menin ohjelmassa file-> open -> ja `1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s`.
 
+  
+
   ### g) Bittistä
 
 ## h) 

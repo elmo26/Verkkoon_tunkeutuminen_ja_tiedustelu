@@ -33,6 +33,11 @@ Kuva 1. rtl_433 asennettuna ja asennuskomento haettu esille.
 
 ## c) Automaattinen analyysi
 
+Latasin näytteen ja avasin sen rtl_433 ohjelmalla komennolla `rtl_433 Converted_433.92M_2000k.cs8`
+
+<img width="1470" height="864" alt="kuva" src="https://github.com/user-attachments/assets/18c43dca-3ace-4627-8db6-c02952846f92" />
+
+
 ## d) Too complex 16?
 
 ## e) Ultimate: URH asennus

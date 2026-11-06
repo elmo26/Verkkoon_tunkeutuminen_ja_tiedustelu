@@ -1,5 +1,7 @@
 # h3 Aaltoja harjaamassa
 
+Alustana kaikissa tehtävissä oli kali-linux virualboxin päällä, host käyttöjärjestelmä Windows 11.
+
 ## x) Lue ja tiivistä
 
 ### Hubacek 2019: Universal Radio Hacker SDR Tutorial on 433 MHz radio plugs tiivistelmä [3:19-7:40](https://www.youtube.com/watch?v=sbqMqb6FVMY&t=199s)
@@ -21,7 +23,10 @@
 
 ## b) rtl_433 asennus ja ajo
 
-Asensin rtl_433 ohjelman kali-linux virtuaalikoneeseen komennolla `sudo apt-get update && sudo apt-get istall rtl-433`
+Kali-linuxissa on rtl_433 paketti saatavilla .
+
+Asensin rtl_433 ohjelman komennolla `sudo apt-get update && sudo apt-get istall rtl-433`
+
 
 
 ## c) Automaattinen analyysi

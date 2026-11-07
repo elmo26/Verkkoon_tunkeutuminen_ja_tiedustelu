@@ -89,8 +89,7 @@ Kuva 5. URH asennus.
 
   Avasin URH-ohjelman komennolla `urh`, menin ohjelmassa file-> open -> ja `1-on-on-on-HackRF-20250412_113805-433_912MHz-2MSps-2MHz.complex16s`.
 
-  Avasin URH-ohjelmassa tiedoston signal-details kohdan ja päättelin tiedostonimestä näytteen taajuuden olevan `433.912MHz` sekä muutin sample rate kohdan `2.0M` eli 2 miljoonaa näytettä per sekunti. 
-  Täten näytteen kesto 2,75 sekuntia. Näytteen nauhoittamisajankohtaa en saanut selville.
+  Avasin URH-ohjelmassa tiedoston signal-details kohdan ja päättelin tiedostonimestä näytteen taajuuden olevan `433.912MHz` sekä muutin sample rate kohdan `2.0M` eli 2 miljoonaa näytettä per sekunti tiedoston nimen   mukaisesti. Täten näytteen kesto 2,75 sekuntia. Näytteen nauhoittamisajankohtaa en saanut selville.
 
   
   <img width="1431" height="430" alt="Näyttökuva 2026-11-07 013346" src="https://github.com/user-attachments/assets/28959bd0-87b1-4970-8ab2-59467e8435e7" />

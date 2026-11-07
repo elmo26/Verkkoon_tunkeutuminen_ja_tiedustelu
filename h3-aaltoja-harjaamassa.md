@@ -103,9 +103,17 @@ Kuva 5. URH asennus.
 
   ### g) Bittistä
 
-## h) 
+  Rupesin tutkimaan näytettä tarkemmin ja käytin autodetect parameters ominaisuutta. Modulaatioksi tuli `ASK` eli amplitude-shift keying. Tässä modulaatiotavassa käytännössä siis lisätään tehoa kun halutaan lähettää ykkönen ja vähennetään tehoa tai ei lähetetä ollenkaan kun halutaan nolla. 
+  
+  Yksi raakabitti on ajassa 263μs eli 263 mikrosekuntia tai 263 sekunnin miljoonasosaa. URH ilmoittaa tämän kun maalaa yhden bitin, kuten alemmasta kuvasta näkyy.
 
-## i) 
+  Yksi mikrosekunti on tuhat kertaa pienempi kuin yksi millisekunti (ms). Jos taas vertaa johonkin oikean elämän asiaan, niin itselläni kesti reaktiotestissä (https://humanbenchmark.com/tests/reactiontime/) noin 200ms painaa nappia värin vaihtuessa. 200*1000 = 200 000. 200 000 /263 ≈ 760. Karkeasti ottaen yksi raakabitti on ajassa noin 760 lyhyempi kuin oma reaktioaikani.
+
+  <img width="1898" height="779" alt="kuva" src="https://github.com/user-attachments/assets/0d2e27e2-9afb-426d-b7ed-b980d3b4c6e5" />
+  Kuva 8. Yksi raakabitti.
+
+## h, i) vapaaehtoisia
+
 
 
 ## Lähteet: 
@@ -116,3 +124,5 @@ https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/ Luettu 6.11.2026
 Karvinen, T 2026. Verkkoon tunkeutuminen ja tiedustelu oppitunti 3.11.2026.
 
 TRIQ.ORG s.a. a Decoder & sample explorer: https://triq.org/explorer/ luettu 6.11
+
+Wikipedia s.a. a Amplitude-shift keying https://en.wikipedia.org/wiki/Amplitude-shift_keying luettu 8.11.2026

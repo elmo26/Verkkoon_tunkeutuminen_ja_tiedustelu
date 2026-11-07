@@ -95,7 +95,7 @@ Kuva 5. URH asennus.
   <img width="1431" height="430" alt="Näyttökuva 2026-11-07 013346" src="https://github.com/user-attachments/assets/28959bd0-87b1-4970-8ab2-59467e8435e7" />
   Kuva 6. perustietoja näytteestä.
   
-  Aloin katsomaan yleiskuvaa signaalista. Silmämääräisesti näyttää siltä, että näytteessä olisi kolme samanlaista signaalia.
+  Aloin katsomaan yleiskuvaa signaalista. Silmämääräisesti näyttää siltä, että näytteessä olisi kolme samanlaista signaalia, kuten tehtävänannossakin on sanottu:"Nexan pistorasian kaukosäätimen valon 1 ON -nappia on     painettu kolmesti" .
 
   <img width="1825" height="303" alt="kuva" src="https://github.com/user-attachments/assets/b89846be-c268-494c-815a-fa870236b408" />
   Kuva 7. Signaali

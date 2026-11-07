@@ -98,7 +98,7 @@ Kuva 5. URH asennus.
   Aloin katsomaan yleiskuvaa signaalista. Silmämääräisesti näyttää siltä, että näytteessä olisi kolme samanlaista signaalia.
 
   <img width="1825" height="303" alt="kuva" src="https://github.com/user-attachments/assets/b89846be-c268-494c-815a-fa870236b408" />
-
+  Kuva 7. Signaali
   
 
   ### g) Bittistä

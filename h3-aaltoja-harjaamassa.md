@@ -104,13 +104,14 @@ Kuva 5. URH asennus.
   ### g) Bittistä
 
   Rupesin tutkimaan näytettä tarkemmin ja käytin autodetect parameters ominaisuutta. Modulaatioksi tuli `ASK` eli amplitude-shift keying. Tässä modulaatiotavassa käytännössä siis lisätään tehoa kun halutaan lähettää ykkönen ja vähennetään tehoa tai ei lähetetä ollenkaan kun halutaan nolla. 
+
+  <img width="1159" height="363" alt="demoduloitu signaali" src="https://github.com/user-attachments/assets/b86b46a4-7791-415e-906b-cb42e451fe71" />
+  Kuva 8 demoduloitu signaali
   
   Yksi raakabitti on ajassa 263μs eli 263 mikrosekuntia tai 263 sekunnin miljoonasosaa. URH ilmoittaa tämän kun maalaa yhden bitin, kuten alemmasta kuvasta näkyy.
 
   Yksi mikrosekunti on tuhat kertaa pienempi kuin yksi millisekunti (ms). Jos taas vertaa johonkin oikean elämän asiaan, niin itselläni kesti reaktiotestissä (https://humanbenchmark.com/tests/reactiontime/) noin 200ms painaa nappia värin vaihtuessa. 200*1000 = 200 000. 200 000 /263 ≈ 760. Karkeasti ottaen yksi raakabitti on ajassa noin 760 lyhyempi kuin oma reaktioaikani.
 
-  <img width="1898" height="779" alt="kuva" src="https://github.com/user-attachments/assets/0d2e27e2-9afb-426d-b7ed-b980d3b4c6e5" />
-  Kuva 8. Yksi raakabitti.
 
 ## h, i) vapaaehtoisia
 

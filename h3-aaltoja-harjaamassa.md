@@ -106,6 +106,7 @@ Kuva 5. URH asennus.
   Rupesin tutkimaan näytettä tarkemmin ja käytin autodetect parameters ominaisuutta. Modulaatioksi tuli `ASK` eli amplitude-shift keying. Tässä modulaatiotavassa käytännössä siis lisätään tehoa kun halutaan lähettää ykkönen ja vähennetään tehoa tai ei lähetetä ollenkaan kun halutaan nolla. 
 
   <img width="1159" height="363" alt="demoduloitu signaali" src="https://github.com/user-attachments/assets/b86b46a4-7791-415e-906b-cb42e451fe71" />
+  
   Kuva 8 demoduloitu signaali
   
   Yksi raakabitti on ajassa 263μs eli 263 mikrosekuntia tai 263 sekunnin miljoonasosaa. URH ilmoittaa tämän kun maalaa yhden bitin, kuten alemmasta kuvasta näkyy.

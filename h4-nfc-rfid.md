@@ -2,9 +2,9 @@
 
 ## a) Tarkastele käytössäsi olevia RFID tuotteita, mieti miten hyvin olet suojautunut RFID urkinnalta?
 
-Rfid eli radio frequency identification ja NFC eli Near-field communication ovat erittäin suosittuja langattomia lähilukuteknologioita, jotka näkyvät jokaisen arjessa nykyään. NFC toimii vain hyvin lyhyllä 
+RFID eli radio frequency identification ja NFC eli Near-field communication ovat erittäin suosittuja langattomia lähilukuteknologioita, jotka näkyvät jokaisen arjessa nykyään. NFC toimii vain hyvin lyhyllä 
 etäisyyksillä (joitakin senttejä) (Wikipedia - Near-field communication). Vanhempi RFID-teknologia voi toimia pidemmilläkin etäisyyksillä, joskin suurin osa rfid-tunnisteista ovat passiivisa eivätkä
-käytä omaa virtalähdettä, mikä lyhentää niiden kantamaa käytetystä taajuudesta riippuen maksimissaan muutamiin metreihin (Wikipedia RFID). Tämä on oleellista tietoa kun mietitään miten urkinnalta suojaudutaan.
+käytä omaa virtalähdettä, mikä lyhentää niiden kantamaa käytetystä taajuudesta riippuen maksimissaan muutamiin metreihin, todellisuudessa usein paljon lyhyemmälle rangelle (Wikipedia RFID). Tämä on oleellista tietoa kun mietitään miten urkinnalta suojaudutaan.
 
 Itselläni on käytössä seuraavat rfid- ja/tai nfc-teknologiaa hyödyntävät ratkaisut.
 
@@ -12,6 +12,13 @@ Itselläni on käytössä seuraavat rfid- ja/tai nfc-teknologiaa hyödyntävät 
 * fyysinen pankkikortti
 * passi, jossa on siru
 * Muita kortteja, kuten kirjastokortti ja välillä kuntosalin kulkukortti
+
+Suurimmat riskit RFID-urkinnalle itselläni ovat kun liikun julkisilla paikoilla. Lähtökohtaisesti pyrin suojautumaan mahdolliselta urkinnalta pitämällä mukanani mahdollisimman vähän mahdollista hyökkäyspinta-alaa 
+eli siis käytännössä kortteja. Esimerkkinä en yleensä pidä mukanani pankkikorttia, passia tai muita kortteja kuin ajokortin. Ajokortissa ei ole sirua ja se on myös turvallisempi fyysisestä näkökulmasta, sillä se ei ole virallinen henkilöllisyydtodistus.
+
+Passin ja pankkikortin sirut ovat lähtökohtaisesti hyvin suojattuja, joten etäurkinta ei näiden kohdalla muodostu kovin suuriksi riskeiksi. Pankkikorttilla maksaessa maksutapahtuma on suojattu niin, että kortti ei luovuta kaikkia tietoja maksupäätteeseen, joten vaikka maksupääte olisi vihamielinen ei korttia saisi kopioitua ainakaan kaikkine tietoineen. Puhelimen tapauksessa lähimaksutoiminnossa NFC:n käyttö vaatii biometrisen tunnistuksen, ja itse maksutapahtuma on fyysistäkin korttia turvallisempi.
+
+
 
 ## b) Tutustu APDU komentojen rakenteeseen (voit käyttää tekoälyä tutustumiseen)
 

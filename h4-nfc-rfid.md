@@ -26,7 +26,7 @@ Itseltäni löytyy myös rfid-suojattu lompakko, joten fyysinen urkinta on täte
 
 Kysyin Gemini pro 3.1 - tekoälymallilta asiasta kopioimalla ylläolevan tehtävänannon suoraan tekoälylle.
 
-APDU eli Application Protocol Data Unit kometoja käytetään älykorttien kuten maksukorttien, SIM-korttien ja muiden nfc-protokollaa hyödyntävien korttien kanssa ja lukijalaitteiden välisessä tiedonsiirrossa tiedonsiirrossa ISO/IEC 7816-4 -standardin mukaisesti. Tiedonsiirto perustuu komento-vastaus pariin : Command APDU (C-APDU) ja Response APDU (R-APDU).
+APDU eli Application Protocol Data Unit kometoja käytetään älykorttien kuten maksukorttien, SIM-korttien ja muiden nfc-protokollaa hyödyntävien korttien kanssa ja lukijalaitteiden välisessä tiedonsiirrossa ISO/IEC 7816-4 -standardin mukaisesti. Tiedonsiirto perustuu komento-vastaus pariin : Command APDU (C-APDU) ja Response APDU (R-APDU).
 
 <img width="973" height="674" alt="kuva" src="https://github.com/user-attachments/assets/fa622711-f252-4709-b36a-05cd3be7d72c" />
 Kuva 1. Gemnini Pro 3.1 Lukijalaitteen C-APDU

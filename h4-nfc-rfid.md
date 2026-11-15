@@ -15,7 +15,7 @@ Itselläni on käytössä seuraavat rfid- ja/tai nfc-teknologiaa hyödyntävät 
 
 Suurimmat riskit RFID-urkinnalle itselläni ovat kun liikun julkisilla paikoilla tai paikoissa, joissa on paljon ihmisiä. Lähtökohtaisesti pyrin suojautumaan mahdolliselta urkinnalta pitämällä mukanani mahdollisimman vähän mahdollista hyökkäyspinta-alaa eli siis käytännössä kortteja. Esimerkkinä en yleensä pidä mukanani pankkikorttia, passia tai muita kortteja kuin ajokortin. Ajokortissa ei ole sirua ja se on myös turvallisempi fyysisestä näkökulmasta, sillä se ei ole virallinen henkilöllisyystodistus.
 
-Passin ja pankkikortin sirut ovat lähtökohtaisesti hyvin suojattuja, joten etäurkinta ei näiden kohdalla muodostu kovin suuriksi riskeiksi. Pankkikorttilla maksaessa maksutapahtuma on suojattu niin, että kortti ei luovuta kaikkia tietoja maksupäätteeseen, joten vaikka maksupääte olisi vihamielinen ei korttia saisi kopioitua ainakaan kaikkine tietoineen. Puhelimen tapauksessa lähimaksutoiminnossa NFC:n käyttö vaatii biometrisen tunnistuksen, ja itse maksutapahtuma on fyysistäkin korttia turvallisempi.
+Passin ja pankkikortin sirut ovat lähtökohtaisesti hyvin suojattuja, joten etäurkinta ei näiden kohdalla muodostu kovin suuriksi riskeiksi, silloin harvoin kun niitä mukanani pidän. Pankkikorttilla maksaessa maksutapahtuma on suojattu niin, että kortti ei luovuta kaikkia tietoja maksupäätteeseen, joten vaikka maksupääte olisi vihamielinen, ei korttia saisi kopioitua ainakaan kaikkine tietoineen. Puhelimen tapauksessa lähimaksutoiminnossa NFC:n käyttö vaatii biometrisen tunnistuksen, ja itse maksutapahtuma on fyysistäkin korttia turvallisempi, sillä puhelin ei luovuta edes niitä tietoja mitä fyysinen kortti.
 
 Suurimman riskin kortti on varmaankin omalla kohdallani salin kulkukortti. Tälle väitteelle ei ole mitään faktapohjaa, muuta kuin se, että kyseessä ei ole niin kriittinen kortti ja sen ylläpitovastuu on yksittäisellä firmalla. En ole kyseistä korttia yrittänyt lukea tai vastaavaa, joten pelkkä ajatus.
 
@@ -24,7 +24,21 @@ Itseltäni löytyy myös rfid-suojattu lompakko, joten fyysinen urkinta on täte
 
 ## b) Tutustu APDU komentojen rakenteeseen (voit käyttää tekoälyä tutustumiseen)
 
+Kysyin Gemini pro 3.1 - tekoälymallilta asiasta kopioimalla ylläolevan tehtävänannon suoraan tekoälylle.
+
+APDU eli Application Protocol Data Unit kometoja käytetään älykorttien kuten maksukorttien, SIM-korttien ja muiden nfc-protokollaa hyödyntävien korttien kanssa ja lukijalaitteiden välisessä tiedonsiirrossa tiedonsiirrossa ISO/IEC 7816-4 -standardin mukaisesti. Tiedonsiirto perustuu komento-vastaus pariin : Command APDU (C-APDU) ja Response APDU (R-APDU).
+
+<img width="973" height="674" alt="kuva" src="https://github.com/user-attachments/assets/fa622711-f252-4709-b36a-05cd3be7d72c" />
+Kuva 1. Gemnini Pro 3.1 Lukijalaitteen C-APDU
+
+<img width="972" height="391" alt="kuva" src="https://github.com/user-attachments/assets/3a3abbeb-cb79-4de1-9c07-12c6081cf672" />
+Kuva 2. Gemini Pro 3.1 Kortin R-APDU.
+
+Pakollisten kenttien lisäksi Lukijalaitteen C-APDU: CLS, INS, P1, P2 lisäksi dataa menee 0-65535 tavua. Kortin pakollisten R-APDU: SW1, SW2 lisäksi 0-65535.
+
 ## c) Tutki ja kerro minkä mielenkiintoisen RFID hakkerointi uutiset löysit. 
+
+
 
 ## Lähteet
 
@@ -37,3 +51,5 @@ Luettavissa: https://fi.wikipedia.org/wiki/RFID Luettu 15.11.2026.
 
 Wikipedia 2025 . Near-field communication.
 Luettavissa: https://fi.wikipedia.org/wiki/Near-field_communication Luettu 15.11.2026.
+
+Gemini Pro 3.1 Tekoälymalli. Promptattu ja luettu 16.11.2026

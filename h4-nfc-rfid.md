@@ -13,7 +13,7 @@ Itselläni on käytössä seuraavat rfid- ja/tai nfc-teknologiaa hyödyntävät 
 * passi, jossa on siru
 * Muita kortteja, kuten kirjastokortti ja välillä kuntosalin kulkukortti
 
-Suurimmat riskit RFID-urkinnalle itselläni ovat kun liikun julkisilla paikoilla tai paikoissa, joissa on paljon ihmisiä. Lähtökohtaisesti pyrin suojautumaan mahdolliselta urkinnalta pitämällä mukanani mahdollisimman vähän mahdollista hyökkäyspinta-alaa eli siis käytännössä kortteja. Esimerkkinä en yleensä pidä mukanani pankkikorttia, passia tai muita kortteja kuin ajokortin. Ajokortissa ei ole sirua ja se on myös turvallisempi fyysisestä näkökulmasta, sillä se ei ole virallinen henkilöllisyydtodistus.
+Suurimmat riskit RFID-urkinnalle itselläni ovat kun liikun julkisilla paikoilla tai paikoissa, joissa on paljon ihmisiä. Lähtökohtaisesti pyrin suojautumaan mahdolliselta urkinnalta pitämällä mukanani mahdollisimman vähän mahdollista hyökkäyspinta-alaa eli siis käytännössä kortteja. Esimerkkinä en yleensä pidä mukanani pankkikorttia, passia tai muita kortteja kuin ajokortin. Ajokortissa ei ole sirua ja se on myös turvallisempi fyysisestä näkökulmasta, sillä se ei ole virallinen henkilöllisyystodistus.
 
 Passin ja pankkikortin sirut ovat lähtökohtaisesti hyvin suojattuja, joten etäurkinta ei näiden kohdalla muodostu kovin suuriksi riskeiksi. Pankkikorttilla maksaessa maksutapahtuma on suojattu niin, että kortti ei luovuta kaikkia tietoja maksupäätteeseen, joten vaikka maksupääte olisi vihamielinen ei korttia saisi kopioitua ainakaan kaikkine tietoineen. Puhelimen tapauksessa lähimaksutoiminnossa NFC:n käyttö vaatii biometrisen tunnistuksen, ja itse maksutapahtuma on fyysistäkin korttia turvallisempi.
 

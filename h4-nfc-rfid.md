@@ -13,11 +13,13 @@ Itselläni on käytössä seuraavat rfid- ja/tai nfc-teknologiaa hyödyntävät 
 * passi, jossa on siru
 * Muita kortteja, kuten kirjastokortti ja välillä kuntosalin kulkukortti
 
-Suurimmat riskit RFID-urkinnalle itselläni ovat kun liikun julkisilla paikoilla. Lähtökohtaisesti pyrin suojautumaan mahdolliselta urkinnalta pitämällä mukanani mahdollisimman vähän mahdollista hyökkäyspinta-alaa 
-eli siis käytännössä kortteja. Esimerkkinä en yleensä pidä mukanani pankkikorttia, passia tai muita kortteja kuin ajokortin. Ajokortissa ei ole sirua ja se on myös turvallisempi fyysisestä näkökulmasta, sillä se ei ole virallinen henkilöllisyydtodistus.
+Suurimmat riskit RFID-urkinnalle itselläni ovat kun liikun julkisilla paikoilla tai paikoissa, joissa on paljon ihmisiä. Lähtökohtaisesti pyrin suojautumaan mahdolliselta urkinnalta pitämällä mukanani mahdollisimman vähän mahdollista hyökkäyspinta-alaa eli siis käytännössä kortteja. Esimerkkinä en yleensä pidä mukanani pankkikorttia, passia tai muita kortteja kuin ajokortin. Ajokortissa ei ole sirua ja se on myös turvallisempi fyysisestä näkökulmasta, sillä se ei ole virallinen henkilöllisyydtodistus.
 
 Passin ja pankkikortin sirut ovat lähtökohtaisesti hyvin suojattuja, joten etäurkinta ei näiden kohdalla muodostu kovin suuriksi riskeiksi. Pankkikorttilla maksaessa maksutapahtuma on suojattu niin, että kortti ei luovuta kaikkia tietoja maksupäätteeseen, joten vaikka maksupääte olisi vihamielinen ei korttia saisi kopioitua ainakaan kaikkine tietoineen. Puhelimen tapauksessa lähimaksutoiminnossa NFC:n käyttö vaatii biometrisen tunnistuksen, ja itse maksutapahtuma on fyysistäkin korttia turvallisempi.
 
+Suurimman riskin kortti on varmaankin omalla kohdallani salin kulkukortti. Tälle väitteelle ei ole mitään faktapohjaa, muuta kuin se, että kyseessä ei ole niin kriittinen kortti ja sen ylläpitovastuu on yksittäisellä firmalla. En ole kyseistä korttia yrittänyt lukea tai vastaavaa, joten pelkkä ajatus.
+
+Itseltäni löytyy myös rfid-suojattu lompakko, joten fyysinen urkinta on täten mahdotonta. Paras suojautumistapa omalla kohdallani on edellämainittujen asioiden lisäksi olla hereillä ja pyrkiä siihen, että en jätä esim salikorttia salilla ollessani hetkeksikään kenenkään ulottuville.
 
 
 ## b) Tutustu APDU komentojen rakenteeseen (voit käyttää tekoälyä tutustumiseen)

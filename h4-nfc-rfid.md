@@ -4,7 +4,7 @@
 
 RFID eli radio frequency identification ja NFC eli Near-field communication ovat erittäin suosittuja langattomia lähilukuteknologioita, jotka näkyvät jokaisen arjessa nykyään. NFC toimii vain hyvin lyhyllä 
 etäisyyksillä (joitakin senttejä) (Wikipedia - Near-field communication). Vanhempi RFID-teknologia voi toimia pidemmilläkin etäisyyksillä, joskin suurin osa rfid-tunnisteista ovat passiivisa eivätkä
-käytä omaa virtalähdettä, mikä lyhentää niiden kantamaa käytetystä taajuudesta riippuen maksimissaan muutamiin metreihin, todellisuudessa usein paljon lyhyemmälle rangelle (Wikipedia RFID). Tämä on oleellista tietoa kun mietitään miten urkinnalta suojaudutaan.
+käytä omaa virtalähdettä, mikä lyhentää niiden kantamaa käytetystä taajuudesta riippuen maksimissaan muutamiin metreihin, todellisuudessa usein paljon lyhyemmälle matkalle (Wikipedia RFID). Tämä on oleellista tietoa kun mietitään miten urkinnalta suojaudutaan.
 
 Itselläni on käytössä seuraavat rfid- ja/tai nfc-teknologiaa hyödyntävät ratkaisut.
 

@@ -10,6 +10,10 @@ Kuva 1. Mininet-virtuaalikone
 
 Kuva 2.
 
+<img width="534" height="267" alt="kuva" src="https://github.com/user-attachments/assets/6457c5d4-7bb5-40a3-896c-0a3a01347eae" />
+
+Kuva 3.
+
 ## b) Samassa hakemistossa on myös ICMP Spoofing ja TCP Session Hijacking. Aja molemmat labrat läpi ja kerro, miten molemmat tekniikat toimivat.
 
 ## c) Hakemistossa 02-SDN-DDos_Simulation tryout-kansiossa on työkalut, jotta voit ajaa TCP SYN-Flood-hyökkäyksen turvallisesti. Kirjoita, miten ajoit hyökkäyksen ja miten kyseinen hyökkäys toimii.

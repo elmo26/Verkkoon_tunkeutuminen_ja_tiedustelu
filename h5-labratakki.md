@@ -2,7 +2,8 @@
 
 ## a) Aja tunnilla esitetty ARP hyökkäys ja tutki, miten se toimii.
 
-
+<img width="794" height="623" alt="kuva" src="https://github.com/user-attachments/assets/c04a7739-4bb8-4a1e-aa86-e17d6c0eaa4a" />
+Kuva 1. Mininet-virtuaalikone
 
 ## b) Samassa hakemistossa on myös ICMP Spoofing ja TCP Session Hijacking. Aja molemmat labrat läpi ja kerro, miten molemmat tekniikat toimivat.
 

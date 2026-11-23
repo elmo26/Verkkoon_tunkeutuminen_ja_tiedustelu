@@ -42,7 +42,18 @@ Tämän jälkeen jatkoin ohjeiden seuraamista ja ajoin seuraavat komennot:
 
 `Node: h3> sshesame -port 22 -listen_address 0.0.0.0` : Käynnistää kuuntelijan taustalle.
 
-`Node: h3> python3 ./arp_poison.py ` : Käynnistää arp-poisoning hyökkäyksen.
+`Node: h3> python3 ./arp_poison.py ` : Käynnistää arp-poisoning hyökkäyksen. Käynnistin tälle toisen xterm-session h3-koneelle, jotta saan listenerin ja arp-poisoning-hyökkäyksen ajettua samaan aikaan.
+
+`Node: h1> ssh h2` : h1 yrittää ottaa yhteyden h2-koneeseen ssh:lla
+
+`Node: h1 : WARNING REMOTE HOST IDENTIFICATION HAS CHANGED` : h1 varoittaa ssh-yhteyden sormenjäljen vaihtumisesta, koska h2 suunnattu ssh-liikenne meneekin oikeasti h3-koneelle, eikä ssh-avainpari ole sama.
+
+`Node: h1> ssh-keygen –R h2  poistetaan vanha avain`: poistetaan vanha avain, jotta saadaan liikenne läpi.
+
+`Node: h1> ssh h2 -> Are you sure you want to continue` : Ohitetaan varoitus tuntemattomasta hostista.
+
+<img width="1685" height="1011" alt="kuva" src="https://github.com/user-attachments/assets/e476d771-7325-4e61-b6c6-cb2bea60b751" />
+Kuva 4.
 
 
 

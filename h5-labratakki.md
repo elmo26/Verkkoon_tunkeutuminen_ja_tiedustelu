@@ -91,7 +91,7 @@ Demonstraatiomielessä logiikka on kuitenkin pitävä, kun vain ajaisi spoofing-
 
 Tämän aloitin ajamalla oikean topologian `sudo python hub_topo.py`, joka olisi pitänyt ajaa myös edellisessä tehtävässä, ja seurasin `README.md` ohjeita. Huomasin ongelmia ohjeiden mukaan injektoinnissa kun h3-koneella käytti kahta erillistä skriptiä. Samasta kansiosta löytyi kuitenkin myös `tcp_sniff_and_hijack.py` scripti ja kokeilin sitä.
 
-`h1: python tcp_server.py` : Tämä käynnistää TCP-palvelimen, joka kuuntelee liikennettä.
+`h1: python tcp_server.py` : Tämä käynnistää TCP-palvelimen, joka kuuntelee liikennettä portista `12345`.
 
 `h3: python tcp_sniff_and_hijack.py` : Käynnistää skriptin joka tarkkailee liikennettä ja väärentää sen, minkä jälkeen lähettää eteenpäin.
 
@@ -104,7 +104,9 @@ Tämän aloitin ajamalla oikean topologian `sudo python hub_topo.py`, joka olisi
 
 Kuva 6. Onnistunut toteutus. 
 
-#### Miten hyökkäys toteutettiin
+#### Miten hyökkäys toimii
+
+h3-kone näkee ja haistelee salaamatonta tcp-liikennettä h1 ja h2 koneiden välillä, luo väärennetyn tcp-paketin samoilla ACK ja SYN arvoilla ja lähettää itse luomansa version paketista koneelle h1, minkä seurauksena teksti "Hello from host 1, You are hacked!" printtaantuu koneen 1 terminaaliin.
 
 ## c) Hakemistossa 02-SDN-DDos_Simulation tryout-kansiossa on työkalut, jotta voit ajaa TCP SYN-Flood-hyökkäyksen turvallisesti. Kirjoita, miten ajoit hyökkäyksen ja miten kyseinen hyökkäys toimii.
 

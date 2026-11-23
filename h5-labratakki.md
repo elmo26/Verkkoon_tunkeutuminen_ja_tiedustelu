@@ -128,7 +128,7 @@ Kuva 8. kaappauksessa ilmaantunutta liikennettä.
 
 #### Miten hyökkäys toimii
 
-Tässä on kysessä ns DDos eli denial of service tai palvelunestohyökäys. Kuten jälkimmäisessä kuvassa numero kahdeksan näkyy, hyökkäävä laite (10.0.0.1) lähettää ainoastaan ensimmäisen SYN viestin monesta eri lähdeportista, joka pakottaa vastaaottavan laitteen (10.0.0.8) allokoimaan resursseja avattavalle TCP-yhteydelle (Wikipedia). TCP:n kolmivaiheinen kättely ei kuitenkaan ikinä mene läpi, joten kohdekoneen resurssit voivat hyökkäyksen johdosta mennä täyteen ja tällöin kone tukkiutuu. Tällaisessa tapauksessa esimerkiksi oikeat käyttäjät eivät välttämättä saa liikennettä palveluun läpi, sillä resurssit ovat ylikuormittuneet.
+Tässä on kysessä ns DDos eli denial of service tai palvelunestohyökäys. Kuten jälkimmäisessä kuvassa numero kahdeksan näkyy, hyökkäävä laite (10.0.0.1) lähettää ainoastaan ensimmäisen `SYN` viestin monesta eri lähdeportista, joka pakottaa vastaaottavan laitteen (10.0.0.8) allokoimaan resursseja avattaville TCP-yhteyksille (Wikipedia). TCP:n kolmivaiheinen kättely ei kuitenkaan ikinä mene läpi, koska hyökkäävä kone ei lähetä viimeistä `ACK` viestiä. Tästä syystä kohdekoneen resurssit voivat hyökkäyksen johdosta mennä täyteen ja tällöin kone tukkiutuu. Tällaisessa tapauksessa esimerkiksi oikeat käyttäjät eivät välttämättä saa liikennettä palveluun läpi, sillä resurssit ovat ylikuormittuneet.
 
 ## Lähteet
 

@@ -32,9 +32,7 @@ Tämän jälkeen jatkoin ohjeiden seuraamista ja ajoin seuraavat komennot:
 
 `Node: h3 > sysctl -w net.ipv4.ip_forward=1`: pistää h3-koneen forwardaamaan ip-paketit.
 
-`Node: h3> iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-` : Ohjaa h3 kautta kulkevan ssh-liikenteen omaan porttiinsa 22.
-
-`port 22` : Ohjaa koneen läpi menevän, muaalle tarkoitetun ssh-liikenteen omaan porttiinsa 22.
+`Node: h3> iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 22` : Ohjaa h3 kautta kulkevan ssh-liikenteen omaan porttiinsa 22.
 
 `Node: h3> tcpdump –i h3-eth0 –w arp-p.pcap &` : Tallentaa kortin `h3-ethO` verkkoliikenteen `arp.p.pcap`-tiedostoon.
 
@@ -55,7 +53,14 @@ Tämän jälkeen jatkoin ohjeiden seuraamista ja ajoin seuraavat komennot:
 <img width="1685" height="1011" alt="kuva" src="https://github.com/user-attachments/assets/e476d771-7325-4e61-b6c6-cb2bea60b751" />
 Kuva 4. ARP-poisoning
 
+Kuvassa näkyy h3-logeissa `SSH connection established`, eli yritimme ottaa ssh-yhteyttä `h1->h2` ja päädyimme koneelle `h3`. Kuten kuvassa näkyy, ssh-yhteyttä otettaessa h1 varoittaa että ip osoitteen `10.0.0.2` osoitteen julkinen ssh-avain eroaa tunnetusta `h2` koneen julkisesta avaimesta. Tämä johtuu siitä, että arp-hyökkäystä suorittava `h3` esittää olevansa `h2`, minkä ip-osoite on `10.0.0.2`.
 
+Huomiona, että taustalla oli toinen h3-ikkuna, jossa `arp_poison.py` pyöri.
+
+
+### Miten hyökkäys toimi
+
+ARP (Adress resolution protocol) on tilaton ja siksi ns MITM eli man in the middle hyökkäys on mahdollinen (mitre 2025). Tämä siis tarkoittaa sitä, että välissä oleva laite voi esittää olevansa joku muu laite kuin oikeasti on, vastaamalla `h1-koneen` arp-kyselyihin olevansa h2 ja `h2-koneen` arp kyselyihin olevansa h1. Tällä periaatteella `h3` kykeni esittämään koneelle `h1` olevansa kone `h2`, ja aikaisemmin ajettu komento `iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 22` ohjasi kaiken `h3` läpi menevän ssh-liikenteen omaan porttiinsa 22.
 
 ## b) Samassa hakemistossa on myös ICMP Spoofing ja TCP Session Hijacking. Aja molemmat labrat läpi ja kerro, miten molemmat tekniikat toimivat.
 
@@ -68,3 +73,5 @@ Iso-Anttila L, 2026. Tietoverkkoihin tunkeutuminen ja tiedustelu luento Haaga-He
 Iso-Anttila L, 2026. Tietoverkkoihin tunkeutuminen ja tiedustelu Mininet luento materiaalit ja ohjeet Haaga-Helia ammattikorkeakoulu. Luettavissa: https://hhmoodle.haaga-helia.fi/course/view.php?id=49869&section=1#tabs-tree-start Luettu 23.11.2026 
 
 ssam246 2024. Network security lab Github. Luettavissa: https://github.com/ssam246/Network-Security-Lab Luettu 23.11.2026
+
+mitre 2025. Adversary-in-the-Middle: ARP Cache Poisoning Luettu 23.11.2026. Luettavissa: https://attack.mitre.org/techniques/T1557/002/

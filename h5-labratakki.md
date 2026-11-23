@@ -110,6 +110,26 @@ h3-kone näkee ja haistelee salaamatonta tcp-liikennettä h1 ja h2 koneiden väl
 
 ## c) Hakemistossa 02-SDN-DDos_Simulation tryout-kansiossa on työkalut, jotta voit ajaa TCP SYN-Flood-hyökkäyksen turvallisesti. Kirjoita, miten ajoit hyökkäyksen ja miten kyseinen hyökkäys toimii.
 
+Ennen tehtävän suoritusta putsasin ympäristön mininetin uudelleenkäynnistyksellä, jotta vanhat topologiat/konfiguraatiot eivät häiritse taustalla.
+
+Toteutin TCP SYN-Flood-hyökkäyksen `02-SDN-DDos_simulation` githubista löytyvän avoimen projektin (santhisenan) ohjeiden avulla. Aloitin katsomalla `README.md` tiedoston githubista, jossa oli ohjeet tehtävän suoritusta varten. Törmäsin
+
+Ensimmäisenä käynnistin ajon kohdalla tuli valitus että "Unable to contact remote controller at 127.0.0.1", joten ajoin `sudo ryu-manager simple_switch_13.py &` saadakseni kontrollerin päälle. Tämän jälkeen avasin uuden ikkunan ja pistin topologian tree_topology.py:n komennolla `sudo python tree_topology.py`. En saanut wiresharkkia fiksusti toimimaan graafisesti, joten kaappasin liikennettä käyttäen komentoa ` sudo tcpdump -i s4-eth3 -w syn_flood.pcap` kytkimen s4 eth3 kortista, ja avasin kaappauksen jälkikäteen.
+
+<img width="1627" height="349" alt="kuva" src="https://github.com/user-attachments/assets/a3d41d8f-1d6a-4315-b394-b2500c380f80" />
+
+kuva 7. Hyökkäyksen ajo ja kaapattu liikenne.
+
+Kuvassa seitsemän näkyy hyökkäyksen eri vaiheet (Episode), ja mitkä laitteet kulloinkin hyökkäävät mihinkin.
+
+<img width="1064" height="394" alt="kuva" src="https://github.com/user-attachments/assets/4c43641e-e7f3-4737-ac52-e1f008ea34d7" />
+
+Kuva 8. kaappauksessa ilmaantunutta liikennettä.
+
+#### Miten hyökkäys toimii
+
+Tässä on kysessä ns DDos eli denial of service tai palvelunestohyökäys. Kuten jälkimmäisessä kuvassa numero kahdeksan näkyy, hyökkäävä laite (10.0.0.1) lähettää ainoastaan ensimmäisen SYN viestin monesta eri lähdeportista, joka pakottaa vastaaottavan laitteen (10.0.0.8) allokoimaan resursseja avattavalle TCP-yhteydelle (Wikipedia). TCP:n kolmivaiheinen kättely ei kuitenkaan ikinä mene läpi, joten kohdekoneen resurssit voivat hyökkäyksen johdosta mennä täyteen ja tällöin kone tukkiutuu. Tällaisessa tapauksessa esimerkiksi oikeat käyttäjät eivät välttämättä saa liikennettä palveluun läpi, sillä resurssit ovat ylikuormittuneet.
+
 ## Lähteet
 
 Iso-Anttila L, 2026. Tietoverkkoihin tunkeutuminen ja tiedustelu luento Haaga-Helia ammattikorkeakoulu 17.11.2026
@@ -119,3 +139,7 @@ Iso-Anttila L, 2026. Tietoverkkoihin tunkeutuminen ja tiedustelu Mininet luento 
 ssam246 2024. Network security lab Github. Luettavissa: https://github.com/ssam246/Network-Security-Lab Luettu 23.11.2026
 
 mitre 2025. Adversary-in-the-Middle: ARP Cache Poisoning Luettu 23.11.2026. Luettavissa: https://attack.mitre.org/techniques/T1557/002/
+
+Santhisenan 2020. DDoS Simulation in a Software Defined Network Luettu 23.11.2026 Luettavissa: https://github.com/santhisenan/SDN_DDoS_Simulation/blob/master/README.md
+
+Wikipedia 2026. SYN flood. Luettu 23.11.2026 Luettavissa: https://en.wikipedia.org/wiki/SYN_flood

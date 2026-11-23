@@ -84,11 +84,11 @@ Lopputuloksena sain scriptit ja pingauksen menemään läpi, kuvassa näkyy dupl
 
 ICMP-protokollaa käytetään mm. verkkoyhteyksien testaamiseen pingaamalla. Varsinaista autentikointia ei ole, joten paketin oikeaa lähettäjää on vaikea todentaa. Toteuttamani hyökkäyksen tapauksessa se teoriassa onnistui, sillä vastaukset tuli tuplana. Toki ajoin sekä sniffing että spoofing scriptit samalla koneella, sillä en saanut sitä muuten toimimaan, joten varsinaisessa hyökkäystarkoituksessa ajologiikka on hyödytön.
 
-Demonstraatiomielessä logiikka on kuitenkin pitävä, kun vain ajaisi spoofing-scriptin toisella koneella.
+Demonstraatiomielessä logiikka on kuitenkin pitävä, kun vain ajaisi spoofing-scriptin toisella koneella. Jälkikäteen mietittynä ympäristö olisi ilmeisesti pitänyt käynnistää hub_topo.py topologialla ohjeiden perusteella, jollon hyökkäyksen olisi voinut toteuttaa fiksusti.
 
 ### TCP Session Hijacking
 
-Periaatteessa hyökkäys toimii niin, että 
+
 
 ## c) Hakemistossa 02-SDN-DDos_Simulation tryout-kansiossa on työkalut, jotta voit ajaa TCP SYN-Flood-hyökkäyksen turvallisesti. Kirjoita, miten ajoit hyökkäyksen ja miten kyseinen hyökkäys toimii.
 

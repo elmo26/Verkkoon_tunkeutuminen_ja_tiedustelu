@@ -83,9 +83,9 @@ Lopputuloksena sain scriptit ja pingauksen menemään läpi, kuvassa näkyy dupl
 
 #### Miten hyökkäys toimii
 
-ICMP-protokollaa käytetään mm. verkkoyhteyksien testaamiseen pingaamalla. Varsinaista autentikointia ei ole, joten paketin oikeaa lähettäjää on vaikea todentaa. Toteuttamani hyökkäyksen tapauksessa se teoriassa onnistui, sillä vastaukset tuli tuplana. Toki ajoin sekä sniffing että spoofing scriptit samalla koneella, sillä en saanut sitä muuten toimimaan, joten varsinaisessa hyökkäystarkoituksessa ajologiikka on hyödytön.
+ICMP-protokollaa käytetään mm. verkkoyhteyksien testaamiseen pingaamalla. Varsinaista autentikointia ei ole, joten paketin oikeaa lähettäjää on vaikea todentaa. Tällöin hyökkääjä voi esittää olevansa kyseltyn ip-osoitteen omistaja. Toteuttamani hyökkäyksen tapauksessa tämä teoriassa onnistui, sillä vastaukset tuli tuplana. Toki ajoin sekä sniffing että spoofing scriptit samalla koneella, sillä en saanut sitä muuten toimimaan, joten varsinaisessa hyökkäystarkoituksessa ajologiikka lienee hyödytön.
 
-Demonstraatiomielessä logiikka on kuitenkin pitävä, kun vain ajaisi spoofing-scriptin toisella koneella. Jälkikäteen mietittynä ympäristö olisi ilmeisesti pitänyt käynnistää hub_topo.py topologialla ohjeiden perusteella, jollon hyökkäyksen olisi voinut toteuttaa fiksusti.
+Demonstraatiomielessä logiikka on kuitenkin pitävä. Jälkikäteen mietittynä ympäristö olisi ilmeisesti pitänyt käynnistää hub_topo.py topologialla ohjeiden perusteella, jollon hyökkäyksen olisi voinut toteuttaa fiksusti.
 
 ### TCP Session Hijacking
 

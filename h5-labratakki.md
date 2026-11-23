@@ -55,7 +55,6 @@ Kuva 4. ARP-poisoning
 
 Kuvassa näkyy h3-logeissa `SSH connection established`, eli yritimme ottaa ssh-yhteyttä `h1->h2` ja päädyimme koneelle `h3`. Kuten kuvassa näkyy, ssh-yhteyttä otettaessa h1 varoittaa että ip osoitteen `10.0.0.2` osoitteen julkinen ssh-avain eroaa tunnetusta `h2` koneen julkisesta avaimesta. Tämä johtuu siitä, että arp-hyökkäystä suorittava `h3` esittää olevansa `h2`, minkä ip-osoite on `10.0.0.2`.
 
-Huomiona, että taustalla oli toinen h3-ikkuna, jossa `arp_poison.py` pyöri.
 
 
 ### Miten hyökkäys toimi
@@ -63,6 +62,20 @@ Huomiona, että taustalla oli toinen h3-ikkuna, jossa `arp_poison.py` pyöri.
 ARP (Adress resolution protocol) on tilaton ja siksi ns MITM eli man in the middle hyökkäys on mahdollinen (mitre 2025). Tämä siis tarkoittaa sitä, että välissä oleva laite voi esittää olevansa joku muu laite kuin oikeasti on, vastaamalla `h1-koneen` arp-kyselyihin olevansa h2 ja `h2-koneen` arp kyselyihin olevansa h1. Tällä periaatteella `h3` kykeni esittämään koneelle `h1` olevansa kone `h2`, ja aikaisemmin ajettu komento `iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 22` ohjasi kaiken `h3` läpi menevän ssh-liikenteen omaan porttiinsa 22.
 
 ## b) Samassa hakemistossa on myös ICMP Spoofing ja TCP Session Hijacking. Aja molemmat labrat läpi ja kerro, miten molemmat tekniikat toimivat.
+
+### ICMP Spoofing
+
+Minulla oli edellisestä tehtävästä koneet `h1,h2 ja h3` päällä, joten ympäristö oli valmis. Katsoin ohjeet tiedostosta README.md, joissa kerrottiin scriptit `sniff_icmp.py` ja `spoof_icmp.py` sekä se, että yhdellä koneella h2 pingata `10.0.0.1` (h1 kone). Scriptit löytyivät polusta `home/mininet/lab/01-Network-Security-Lab/scripts`.
+
+Ajoin seuraavat komennot:
+
+`h1: python3 ./sniff_icmp.py`
+
+`h2: ping 10.0.0.1`
+
+`h3: python3 ./spoof_icmp.py`
+
+### TCP Session Hijacking
 
 ## c) Hakemistossa 02-SDN-DDos_Simulation tryout-kansiossa on työkalut, jotta voit ajaa TCP SYN-Flood-hyökkäyksen turvallisesti. Kirjoita, miten ajoit hyökkäyksen ja miten kyseinen hyökkäys toimii.
 

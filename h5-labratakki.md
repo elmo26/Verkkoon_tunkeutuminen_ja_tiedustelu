@@ -76,6 +76,7 @@ Ajoin seuraavat komennot (ajoin molemmat scriptit h1 demonstroidakseni hyökkäy
 `h2: ping 10.0.0.1`
 
 <img width="1698" height="523" alt="kuva" src="https://github.com/user-attachments/assets/0b392f6d-1342-49f5-a12e-4e1a9c1f66b6" />
+
 Kuva 5. ICMP-spoofing
 Lopputuloksena sain scriptit ja pingauksen menemään läpi, kuvassa näkyy duplikaatti vastaukset.
 
@@ -88,7 +89,22 @@ Demonstraatiomielessä logiikka on kuitenkin pitävä, kun vain ajaisi spoofing-
 
 ### TCP Session Hijacking
 
+Tämän aloitin ajamalla oikean topologian `sudo python hub_topo.py`, joka olisi pitänyt ajaa myös edellisessä tehtävässä, ja seurasin `README.md` ohjeita. Huomasin ongelmia ohjeiden mukaan injektoinnissa kun h3-koneella käytti kahta erillistä skriptiä. Samasta kansiosta löytyi kuitenkin myös `tcp_sniff_and_hijack.py` scripti ja kokeilin sitä.
 
+`h1: python tcp_server.py` : Tämä käynnistää TCP-palvelimen, joka kuuntelee liikennettä.
+
+`h3: python tcp_sniff_and_hijack.py` : Käynnistää skriptin joka tarkkailee liikennettä ja väärentää sen, minkä jälkeen lähettää eteenpäin.
+
+`h2: python tcp_client.py` : Asiakaskone, joka lähettää TCP-yhteyden yli palvelimen osoitteeseen `10.0.0.1:12345` (kuuntelava palvelin) viestin `Hello from host 2` ja vastaanottaa viestin takaisin: `Hello from host 1`.
+
+
+ Kuvasta näkee, että hyökkäys onnistui, kone h1: `"Hello from host 1, You are hacked!"`
+
+<img width="1743" height="674" alt="kuva" src="https://github.com/user-attachments/assets/00cad1ed-98d4-4c46-85d6-fbccede08a07" />
+
+Kuva 6. Onnistunut toteutus. 
+
+#### Miten hyökkäys toteutettiin
 
 ## c) Hakemistossa 02-SDN-DDos_Simulation tryout-kansiossa on työkalut, jotta voit ajaa TCP SYN-Flood-hyökkäyksen turvallisesti. Kirjoita, miten ajoit hyökkäyksen ja miten kyseinen hyökkäys toimii.
 

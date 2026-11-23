@@ -120,7 +120,7 @@ Ensimmäisenä käynnistin ajon kohdalla tuli valitus että "Unable to contact r
 
 kuva 7. Hyökkäyksen ajo ja kaapattu liikenne.
 
-Kuvassa seitsemän näkyy hyökkäyksen eri vaiheet (Episode), ja mitkä laitteet kulloinkin hyökkäävät mihinkin.
+Kuvassa seitsemän näkyy hyökkäyksen eri vaiheet (Episode), ja mitkä laitteet kulloinkin hyökkäävät mihinkin. Kokoajan yksi hyökkää ja toinen lähettää normaalia liikennettä.
 
 <img width="1064" height="394" alt="kuva" src="https://github.com/user-attachments/assets/4c43641e-e7f3-4737-ac52-e1f008ea34d7" />
 

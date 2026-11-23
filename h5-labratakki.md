@@ -93,7 +93,7 @@ Tämän aloitin ajamalla oikean topologian `sudo python hub_topo.py`, joka olisi
 
 `h1: python tcp_server.py` : Tämä käynnistää TCP-palvelimen, joka kuuntelee liikennettä portista `12345`.
 
-`h3: python tcp_sniff_and_hijack.py` : Käynnistää skriptin joka tarkkailee liikennettä ja väärentää sen, minkä jälkeen lähettää eteenpäin.
+`h3: python tcp_sniff_and_hijack.py` : Käynnistää skriptin joka tarkkailee liikennettä ja muokkaa pakettia, minkä jälkeen lähettää paketin alkuperäiseen määränpäähän.
 
 `h2: python tcp_client.py` : Asiakaskone, joka lähettää TCP-yhteyden yli palvelimen osoitteeseen `10.0.0.1:12345` (kuuntelava palvelin) viestin `Hello from host 2` ja vastaanottaa viestin takaisin: `Hello from host 1`.
 

@@ -12,6 +12,8 @@ Kuva 1. Mininet-virtuaalikone käynnissä
 
 Tämän jälkeen seurasin ohjeita ja otin ssh-yhteyden mininet-koneelle sekä aloitin arp-hyökkäyksen ajon valmistelun.
 
+Ajoin ensin `./get_xauth.sh` scriptin ja sitten `sudo -s xauth add mininet-vm/unix:10 MIT-MAGIC-COOKIE-1 "cookie"`, sillä oli hieman ongelmia xtermin kanssa, ja tämä oli ohjeissa ratkaisuna ongelmille. Tämä näkyy kuvassa 2.
+
 Ajoin komennon `ryu-manager ryu.app.simple_switch_13`, mikä käynnistää Ryu SDN -kontrollerin. Sitten ajoin komennon `sudo mn --topo single,3 --mac --switch ovsk --controller remote`, mikä luo mininet-verkon sisältäen virtuaalikoneet `h1,h2,h3`, mac-osoitteet `--mac` ja yhteyden kontrolleriin `--controller remote`.
 
 Ajoin myös komennot `pingall` ja `xterm h1 h2 h3`: ensin pingall täyttää arp-taulut kun koneet pingaavat toisiaan, ja xterm-komento avaa kaikille koneille terminaali-ikkunat. Nämä komennot näkyvät alla olevissa kuvissa 1. ja 2.
@@ -30,15 +32,17 @@ Tämän jälkeen jatkoin ohjeiden seuraamista ja ajoin seuraavat komennot:
 
 `Node: h3 > sysctl -w net.ipv4.ip_forward=1`: pistää h3-koneen forwardaamaan ip-paketit.
 
-`Node: h3> iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-
+`Node: h3> iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-` : Ohjaa h3 kautta kulkevan ssh-liikenteen omaan porttiinsa 22.
 
 `port 22` : Ohjaa koneen läpi menevän, muaalle tarkoitetun ssh-liikenteen omaan porttiinsa 22.
 
 `Node: h3> tcpdump –i h3-eth0 –w arp-p.pcap &` : Tallentaa kortin `h3-ethO` verkkoliikenteen `arp.p.pcap`-tiedostoon.
 
-`Node: h3> wireshark &` : Käynnistää wiresharkin taustalle
+`Node: h3> wireshark &` : Käynnistää wiresharkin taustalle.
 
-`Node: h3> sshesame -port 22 -listen_address 0.0.0.0` : Käynnistää kuuntelijan taustalle
+`Node: h3> sshesame -port 22 -listen_address 0.0.0.0` : Käynnistää kuuntelijan taustalle.
+
+`Node: h3> python3 ./arp_poison.py ` : Käynnistää arp-poisoning hyökkäyksen.
 
 
 

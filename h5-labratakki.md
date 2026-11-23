@@ -1,8 +1,10 @@
 # Labratakki
 
-Aloitin pistämällä moodlesta löytyvän Mininet-ympäristön pystyyn VMware:n päälle ja latasin MobaXtermin, jotta saan virtuaalikoneiden pääteikkunat näkyviin. Host koneena toimi Windows 11 versio 26H2.
+Aloitin pistämällä moodlesta löytyvän Mininet-ympäristön pystyyn VMware:n päälle ja latasin MobaXtermin, jotta saan virtuaalikoneiden pääteikkunat näkyviin. Pistin myös VMware:n network-adapterin host-only tilaan, jotta ympäristö olisi mahdollisimman eristetty. Host koneena toimi Windows 11 versio 26H2. 
 
 ## a) Aja tunnilla esitetty ARP hyökkäys ja tutki, miten se toimii.
+
+Aloitin seuraamalla ohjeita ja pistin minineti-koneen päälle ja katdoin sen ip:n ssh-yhteyttä varten.
 
 <img width="794" height="623" alt="kuva" src="https://github.com/user-attachments/assets/c04a7739-4bb8-4a1e-aa86-e17d6c0eaa4a" />
 

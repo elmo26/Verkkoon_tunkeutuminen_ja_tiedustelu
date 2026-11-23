@@ -65,17 +65,30 @@ ARP (Adress resolution protocol) on tilaton ja siksi ns MITM eli man in the midd
 
 ### ICMP Spoofing
 
-Minulla oli edellisestä tehtävästä koneet `h1,h2 ja h3` päällä, joten ympäristö oli valmis. Katsoin ohjeet tiedostosta README.md, joissa kerrottiin scriptit `sniff_icmp.py` ja `spoof_icmp.py` sekä se, että yhdellä koneella h2 pingata `10.0.0.1` (h1 kone). Scriptit löytyivät polusta `home/mininet/lab/01-Network-Security-Lab/scripts`.
+Minulla oli edellisestä tehtävästä koneet `h1,h2 ja h3` päällä, joten ympäristö oli valmis. Katsoin ohjeet tiedostosta README.md, joissa kerrottiin scriptit `sniff_icmp.py` ja `spoof_icmp.py` sekä se, että yhdellä koneella h2 pingata `10.0.0.1` (h1 kone). Scriptit löytyivät polusta `home/mininet/lab/01-Network-Security-Lab/scripts`. Ohjeet olivat aikalailla epäselvät: niissä mainittiin molemmat scriptit mutta vain toinen mainittiin toteutusvaiheessa.
 
-Ajoin seuraavat komennot:
+Ajoin seuraavat komennot (ajoin molemmat scriptit h1 demonstroidakseni hyökkäyksen, mikä tietysti ei ole kovin fiksua hyökkäysnäkökulmasta.
 
 `h1: python3 ./sniff_icmp.py`
 
+`h1: python3 ./spoof_icmp.py`
+
 `h2: ping 10.0.0.1`
 
-`h3: python3 ./spoof_icmp.py`
+<img width="1698" height="523" alt="kuva" src="https://github.com/user-attachments/assets/0b392f6d-1342-49f5-a12e-4e1a9c1f66b6" />
+Kuva 5. ICMP-spoofing
+Lopputuloksena sain scriptit ja pingauksen menemään läpi, kuvassa näkyy duplikaatti vastaukset.
+
+
+#### Miten hyökkäys toimii
+
+ICMP-protokollaa käytetään mm. verkkoyhteyksien testaamiseen pingaamalla. Varsinaista autentikointia ei ole, joten paketin oikeaa lähettäjää on vaikea todentaa. Toteuttamani hyökkäyksen tapauksessa se teoriassa onnistui, sillä vastaukset tuli tuplana. Toki ajoin sekä sniffing että spoofing scriptit samalla koneella, sillä en saanut sitä muuten toimimaan, joten varsinaisessa hyökkäystarkoituksessa ajologiikka on hyödytön.
+
+Demonstraatiomielessä logiikka on kuitenkin pitävä, kun vain ajaisi spoofing-scriptin toisella koneella.
 
 ### TCP Session Hijacking
+
+Periaatteessa hyökkäys toimii niin, että 
 
 ## c) Hakemistossa 02-SDN-DDos_Simulation tryout-kansiossa on työkalut, jotta voit ajaa TCP SYN-Flood-hyökkäyksen turvallisesti. Kirjoita, miten ajoit hyökkäyksen ja miten kyseinen hyökkäys toimii.
 

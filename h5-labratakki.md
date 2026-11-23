@@ -53,7 +53,7 @@ Tämän jälkeen jatkoin ohjeiden seuraamista ja ajoin seuraavat komennot:
 <img width="1685" height="1011" alt="kuva" src="https://github.com/user-attachments/assets/e476d771-7325-4e61-b6c6-cb2bea60b751" />
 Kuva 4. ARP-poisoning
 
-Kuvassa näkyy h3-logeissa `SSH connection established`, eli yritimme ottaa ssh-yhteyttä `h1->h2` ja päädyimme koneelle `h3`. Kuten kuvassa näkyy, ssh-yhteyttä otettaessa h1 varoittaa että ip osoitteen `10.0.0.2` osoitteen julkinen ssh-avain eroaa tunnetusta `h2` koneen julkisesta avaimesta. Tämä johtuu siitä, että arp-hyökkäystä suorittava `h3` esittää olevansa `h2`, minkä ip-osoite on `10.0.0.2`.
+Kuvassa näkyy h3-logeissa `SSH connection established`, eli yritimme ottaa ssh-yhteyttä `h1->h2` ja päädyimme koneelle `h3`. Kuten kuvassa näkyy, ssh-yhteyttä otettaessa h1 varoittaa että ip osoitteen `10.0.0.2`  julkinen ssh-avain eroaa tunnetusta `h2` koneen julkisesta avaimesta. Tämä johtuu siitä, että arp-hyökkäystä suorittava `h3` esittää olevansa `h2`, minkä ip-osoite on `10.0.0.2`.
 
 
 
@@ -65,7 +65,7 @@ ARP (Adress resolution protocol) on tilaton ja siksi ns MITM eli man in the midd
 
 ### ICMP Spoofing
 
-Minulla oli edellisestä tehtävästä koneet `h1,h2 ja h3` päällä, joten ympäristö oli valmis. Katsoin ohjeet tiedostosta README.md, joissa kerrottiin scriptit `sniff_icmp.py` ja `spoof_icmp.py` sekä se, että yhdellä koneella h2 pingata `10.0.0.1` (h1 kone). Scriptit löytyivät polusta `home/mininet/lab/01-Network-Security-Lab/scripts`. Ohjeet olivat aikalailla epäselvät: niissä mainittiin molemmat scriptit mutta vain toinen mainittiin toteutusvaiheessa.
+Minulla oli edellisestä tehtävästä koneet `h1,h2 ja h3` päällä, joten ympäristö oli luullakseni valmis. Katsoin ohjeet tiedostosta README.md, joissa kerrottiin scriptit `sniff_icmp.py` ja `spoof_icmp.py` sekä se, että yhdellä koneella h2 pingata `10.0.0.1` (h1 kone). Scriptit löytyivät polusta `home/mininet/lab/01-Network-Security-Lab/scripts`. Ohjeet olivat aikalailla epäselvät: niissä mainittiin molemmat scriptit mutta vain toinen mainittiin toteutusvaiheessa.
 
 Ajoin seuraavat komennot (ajoin molemmat scriptit h1 demonstroidakseni hyökkäyksen, mikä tietysti ei ole kovin fiksua hyökkäysnäkökulmasta.
 
@@ -114,7 +114,7 @@ Ennen tehtävän suoritusta putsasin ympäristön mininetin uudelleenkäynnistyk
 
 Toteutin TCP SYN-Flood-hyökkäyksen `02-SDN-DDos_simulation` githubista löytyvän avoimen projektin (santhisenan) ohjeiden avulla. Aloitin katsomalla `README.md` tiedoston githubista, jossa oli ohjeet tehtävän suoritusta varten. Törmäsin
 
-Ensimmäisenä käynnistin ajon kohdalla tuli valitus että "Unable to contact remote controller at 127.0.0.1", joten ajoin `sudo ryu-manager simple_switch_13.py &` saadakseni kontrollerin päälle. Tämän jälkeen avasin uuden ikkunan ja pistin topologian tree_topology.py:n komennolla `sudo python tree_topology.py`. En saanut wiresharkkia fiksusti toimimaan graafisesti, joten kaappasin liikennettä käyttäen komentoa ` sudo tcpdump -i s4-eth3 -w syn_flood.pcap` kytkimen s4 eth3 kortista, ja avasin kaappauksen jälkikäteen.
+Ensimmäisenä käynnistin ajon kohdalla tuli valitus että "Unable to contact remote controller at 127.0.0.1", joten ajoin `sudo ryu-manager simple_switch_13.py &` saadakseni kontrollerin päälle. Tämän jälkeen avasin uuden ikkunan ja pistin topologian tree_topology.py:n komennolla `sudo python tree_topology.py`. En saanut wiresharkkia fiksusti toimimaan graafisesti, joten kaappasin liikennettä käyttäen komentoa ` sudo tcpdump -i s4-eth3 -w syn_flood.pcap` kytkimen s4 eth3 kortista, ja avasin kaappauksen jälkikäteen wiresharkilla.
 
 <img width="1627" height="349" alt="kuva" src="https://github.com/user-attachments/assets/a3d41d8f-1d6a-4315-b394-b2500c380f80" />
 

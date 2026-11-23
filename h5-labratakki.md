@@ -27,11 +27,17 @@ Kuva 3.
 Tämän jälkeen jatkoin ohjeiden seuraamista ja ajoin seuraavat komennot: 
 
 `Node: h1 > arp -n` : Näyttää tallennetut arp-taulut eli koneiden h2 ja h3 mac-osoitteet.
+
 `Node: h3 > sysctl -w net.ipv4.ip_forward=1`: pistää h3-koneen forwardaamaan ip-paketit.
+
 `Node: h3> iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-
-port 22` : Ohjaa koneen läpi menevän, muaalle tarkoitetun ssh-liikenteen omaan porttiinsa 22.
+
+`port 22` : Ohjaa koneen läpi menevän, muaalle tarkoitetun ssh-liikenteen omaan porttiinsa 22.
+
 `Node: h3> tcpdump –i h3-eth0 –w arp-p.pcap &` : Tallentaa kortin `h3-ethO` verkkoliikenteen `arp.p.pcap`-tiedostoon.
+
 `Node: h3> wireshark &` : Käynnistää wiresharkin taustalle
+
 `Node: h3> sshesame -port 22 -listen_address 0.0.0.0` : Käynnistää kuuntelijan taustalle
 
 

@@ -4,11 +4,17 @@ Aloitin pistämällä moodlesta löytyvän Mininet-ympäristön pystyyn VMware:n
 
 ## a) Aja tunnilla esitetty ARP hyökkäys ja tutki, miten se toimii.
 
-Aloitin seuraamalla ohjeita ja pistin minineti-koneen päälle ja katdoin sen ip:n ssh-yhteyttä varten.
+Aloitin seuraamalla ohjeita ja pistin mininet-koneen päälle ja katsoin sen ip:n ssh-yhteyttä varten. Näkyy kuvassa 1.
 
 <img width="794" height="623" alt="kuva" src="https://github.com/user-attachments/assets/c04a7739-4bb8-4a1e-aa86-e17d6c0eaa4a" />
 
-Kuva 1. Mininet-virtuaalikone
+Kuva 1. Mininet-virtuaalikone käynnissä
+
+Tämän jälkeen seurasin ohjeita ja otin ssh-yhteyden mininet-koneelle sekä aloitin arp-hyökkäyksen ajon valmistelun.
+
+Ajoin komennon `ryu-manager ryu.app.simple_switch_13`, mikä käynnistää Ryu SDN -kontrollerin. Sitten ajoin komennon `sudo mn --topo single,3 --mac --switch ovsk --controller remote`, mikä luo mininet-verkon sisältäen virtuaalikoneet `h1,h2,h3`, mac-osoitteet `--mac` ja yhteyden kontrolleriin `--controller remote`.
+
+Ajoin myös komennot `pingall` ja `xterm h1 h2 h3`: ensin pingall täyttää arp-taulut kun koneet pingaavat toisiaan, ja xterm-komento avaa kaikille koneille terminaali-ikkunat. Nämä komennot näkyvät alla olevissa kuvissa 1. ja 2.
 
 <img width="681" height="864" alt="kuva" src="https://github.com/user-attachments/assets/e9e1320f-44aa-4082-9937-642cca43c1d7" />
 
@@ -17,6 +23,18 @@ Kuva 2.
 <img width="534" height="267" alt="kuva" src="https://github.com/user-attachments/assets/6457c5d4-7bb5-40a3-896c-0a3a01347eae" />
 
 Kuva 3.
+
+Tämän jälkeen jatkoin ohjeiden seuraamista ja ajoin seuraavat komennot: 
+
+`Node: h1 > arp -n` : Näyttää tallennetut arp-taulut eli koneiden h2 ja h3 mac-osoitteet.
+`Node: h3 > sysctl -w net.ipv4.ip_forward=1`: pistää h3-koneen forwardaamaan ip-paketit.
+`Node: h3> iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-
+port 22` : Ohjaa koneen läpi menevän, muaalle tarkoitetun ssh-liikenteen omaan porttiinsa 22.
+`Node: h3> tcpdump –i h3-eth0 –w arp-p.pcap &` : Tallentaa kortin `h3-ethO` verkkoliikenteen `arp.p.pcap`-tiedostoon.
+`Node: h3> wireshark &` : Käynnistää wiresharkin taustalle
+`Node: h3> sshesame -port 22 -listen_address 0.0.0.0` : Käynnistää kuuntelijan taustalle
+
+
 
 ## b) Samassa hakemistossa on myös ICMP Spoofing ja TCP Session Hijacking. Aja molemmat labrat läpi ja kerro, miten molemmat tekniikat toimivat.
 

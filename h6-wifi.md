@@ -14,6 +14,7 @@ Tämän jälkeen tutustuin ympäristöön avaamalla harjoitusympäristön ja tut
 Sitten aloin tiedustelemaan verkkoja ensin pistämällä virtuaalisen wifikortin monitorointitilaan komennolla `sudo airmon-ng start wlan1`. Tämän jälkeen aloitin liikenteen kaappaamisen komennolla `sudo airodump-ng wlan1mon -w scan --manufacturer --wps --abg `. Ensimmäinen komento ohjelmalla `airmon-ng` siis asettaa virtuaalisen wifitikun kuuntevaan modeen ja jälkimmäinen komento alkaa kuuntelemaan liikennettä kyseiseltä "tikulta" sekä tallentaa kuunnellun liikenteen tiedostoon. Kuuntelun lopettamisen jälkeen asetin kuuntelumoden pois komennolla `sudo airmon-ng stop wlan1mon`.
 
 <img width="1150" height="480" alt="kuva" src="https://github.com/user-attachments/assets/8c34cfda-2d27-44d1-971e-b58e5bba34dc" />
+
 Kuva 1. kuunneltua liikennettä.
 
 Sitten valitsin hyökkäyksen kohteeksi verkon nimeltä wifi-old, sillä se käytti vanhentunutta ja haavoittuvaa WEP-salausta (wikipedia 2026). Verkko näkyy kuvassa ylhäällä ja se käyttää kanavaa `3`, sekä sen BSSID eli mac-tunnus on `F0:9F:C2:71:22:11`.

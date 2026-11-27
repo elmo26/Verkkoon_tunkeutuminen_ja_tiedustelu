@@ -3,7 +3,7 @@
 
 ## a) Tutustu wifi challenge lab 2.1 harjoitus ympäristöön ja käytä tarvittaessa hyväksesi jo olemassa olevia ohjeita.
 
-### WPA
+### WEP
 
 Aloitin harjoitukseen tutustumisen lukemalla moodlen luentomateriaalit ja WifiChallenge Labin sivut (Wifi lab challenge s.a.a). WifiChallenge labin harjoitusympäristö on `Dockerilla` ja `mac80211_hwsim ` softaradiosimulaattorilla luotu virtuaaliympäristö, joka pyrkii simuloimaan langattomia verkkokokonaisuuksia ja luo täten turvallisen ympäristön WiFi-hyökkäyksien harjoitteluun virtuaalikoeen sisällä. Ympäristö sisältää 17 langatonta verkkoa sisältäen eri salausmenetelmiä, kuten `OWE, WEP, WPA/WPA2-PSK ja WPA3-SAE ` (WifiChallengelab s.a.b.). Ympäristön verkot toimivat taajuuksilla `2,4 , 5 ja 6 GHz` (WiFiChallenge lab s.a.b.).
 
@@ -26,8 +26,15 @@ Kuva 2. Verkon avain saatu.
 
 Yhteenvetona sain siis korkattua `wifi-old` verkon avain. Kuuntelemalla liikennettä saatiin selville, että verkko käytti vanhentunutta salausmetodia. Sieltä saatiin myös verkon käyttämä kanava sekä `BSSID ` nimen eli `ESSID` lisäksi. Näillä tiedoilla kyettiin käyttämään `besside-ng` -ohjelmaa ja sillä saatiin selville verkon avain.
 
-### WPA-PSK
+### WPA2-PSK
 
+Sitten valitsin toisen verkon hyökkäyksen kohteeksi. Tällä kertaa valikoitui `WPA2-PSK` salattu verkko sillä `PSK`-salauksen murtamisesta oli esimerkki luentokalvoissa. Valitsin kuvassa 1 näkyvistä verkoista verkon nimeltä `wifi-mobile`. Sen `BSSID` on `F0:9F:C2:71:22:12 ` ja kanava `6`. 
+
+Rupesin kaappaamaan liikennettä komennolla `sudo airodump-ng wlan1mon -w wpa-psk -c 6 --wps`. Huom wlan0 on monitor-moodissa.  Generoin myös liikennettä samalle samaan verkkoon komennolla "sudo aireplay-ng -0 10 -a F0:9F:C2:71:22:12 wlan1mon".
+
+<img width="1598" height="572" alt="kuva" src="https://github.com/user-attachments/assets/374967f5-ad6d-4327-a26e-6978ef697a88" />
+
+Kuva 3. WPA2-PSK capture, generoitu liikenne
 
 ## b) Kirjoita raportti siitä mitä opit ja mitkä asia yllättivät sinut kun tutustuit harjoitukseen.
 

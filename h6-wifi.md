@@ -3,6 +3,8 @@
 
 ## a) Tutustu wifi challenge lab 2.1 harjoitus ympäristöön ja käytä tarvittaessa hyväksesi jo olemassa olevia ohjeita.
 
+### WPA
+
 Aloitin harjoitukseen tutustumisen lukemalla moodlen luentomateriaalit ja WifiChallenge Labin sivut (Wifi lab challenge s.a.a). WifiChallenge labin harjoitusympäristö on `Dockerilla` ja `mac80211_hwsim ` softaradiosimulaattorilla luotu virtuaaliympäristö, joka pyrkii simuloimaan langattomia verkkokokonaisuuksia ja luo täten turvallisen ympäristön WiFi-hyökkäyksien harjoitteluun virtuaalikoeen sisällä. Ympäristö sisältää 17 langatonta verkkoa sisältäen eri salausmenetelmiä, kuten `OWE, WEP, WPA/WPA2-PSK ja WPA3-SAE ` (WifiChallengelab s.a.b.). Ympäristön verkot toimivat taajuuksilla `2,4 , 5 ja 6 GHz` (WiFiChallenge lab s.a.b.).
 
 Latasin harjoitusympäristön kurssin moodle-sivuilta ja liitin ympäristön VMwareen. Ympäristöä ei tarvinnut konfiguroida, se oli valmis sellaisenaan.
@@ -22,7 +24,9 @@ Tämän jälkeen lähdin hyökkäämään verkkoa vastaan komennolla `sudo bessi
 
 Kuva 2. Verkon avain saatu.
 
-Yhteenvetona sain siis korkattua `wifi-old` verkon salasanan. Verkko käytti vanhentunutta salausmetodia.
+Yhteenvetona sain siis korkattua `wifi-old` verkon avain. Kuuntelemalla liikennettä saatiin selville, että verkko käytti vanhentunutta salausmetodia. Sieltä saatiin myös verkon käyttämä kanava sekä `BSSID ` nimen eli `ESSID` lisäksi. Näillä tiedoilla kyettiin käyttämään `besside-ng` -ohjelmaa ja sillä saatiin selville verkon avain.
+
+### WPA-PSK
 
 
 ## b) Kirjoita raportti siitä mitä opit ja mitkä asia yllättivät sinut kun tutustuit harjoitukseen.

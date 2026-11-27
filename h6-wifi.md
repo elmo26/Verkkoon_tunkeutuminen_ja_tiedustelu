@@ -24,17 +24,27 @@ Tämän jälkeen lähdin hyökkäämään verkkoa vastaan komennolla `sudo bessi
 
 Kuva 2. Verkon avain saatu.
 
+#### Miten hyökkäys toimi?
+
 Yhteenvetona sain siis korkattua `wifi-old` verkon avain. Kuuntelemalla liikennettä saatiin selville, että verkko käytti vanhentunutta salausmetodia. Sieltä saatiin myös verkon käyttämä kanava sekä `BSSID ` nimen eli `ESSID` lisäksi. Näillä tiedoilla kyettiin käyttämään `besside-ng` -ohjelmaa ja sillä saatiin selville verkon avain.
 
 ### WPA2-PSK
 
 Sitten valitsin toisen verkon hyökkäyksen kohteeksi. Tällä kertaa valikoitui `WPA2-PSK` salattu verkko sillä `PSK`-salauksen murtamisesta oli esimerkki luentokalvoissa. Valitsin kuvassa 1 näkyvistä verkoista verkon nimeltä `wifi-mobile`. Sen `BSSID` on `F0:9F:C2:71:22:12 ` ja kanava `6`. 
 
-Rupesin kaappaamaan liikennettä komennolla `sudo airodump-ng wlan1mon -w wpa-psk -c 6 --wps`. Huom wlan0 on monitor-moodissa.  Generoin myös liikennettä samalle samaan verkkoon komennolla "sudo aireplay-ng -0 10 -a F0:9F:C2:71:22:12 wlan1mon".
+Rupesin kaappaamaan liikennettä komennolla `sudo airodump-ng wlan1mon -w wpa-psk -c 6 --wps`. Huom wlan0 on monitor-moodissa.  Generoin myös liikennettä samaan verkkoon komennolla `sudo aireplay-ng -0 10 -a F0:9F:C2:71:22:12 wlan1mon`.
 
 <img width="1598" height="572" alt="kuva" src="https://github.com/user-attachments/assets/374967f5-ad6d-4327-a26e-6978ef697a88" />
 
-Kuva 3. WPA2-PSK capture, generoitu liikenne
+Kuva 3. WPA2-PSK capture, generoitu liikenne.
+
+Sitten lopetin liikenteen kaappauksen ja hyökkäsin `aircrack-ng` -ohjelmalla tallennettuun tiedostoon, jossa kaappaus oli. Tämän tein komennolla `sudo aircrack-ng wpa-psk-01.cap -w /root/rockyou-top100000.txt`. Wordlistina toimi komennossa näkyvä `rockyou-top100000.txt`. Tämä siksi, että labin README-tiedostossa (WiFiChallenge lab s.a.b.) oli mainittu, että kaikki salasanalistaa hyödyntävät hyökkäykset on mahdollista suorittaa kyseisellä listalla, joten turha ajaa isompia listoja.
+
+<img width="845" height="482" alt="kuva" src="https://github.com/user-attachments/assets/08462b60-bcbc-456c-8fe7-da4111a173b4" />
+
+Kuva 4. verkon `wifi-mobile` korkattu avain.
+
+#### Miten hyökkäys toimi?
 
 ## b) Kirjoita raportti siitä mitä opit ja mitkä asia yllättivät sinut kun tutustuit harjoitukseen.
 
